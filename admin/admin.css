@@ -51,9 +51,9 @@ body {
 
 .admin-language {
   position: fixed;
-  top: 1.25rem;
-  right: 1.25rem;
-  z-index: 20;
+  top: 5.25rem;
+  right: 1.5rem;
+  z-index: 2147483000;
   display: flex;
   gap: 0.35rem;
   padding: 0.35rem;
@@ -94,7 +94,7 @@ body {
 }
 
 .cms-loaded .admin-language {
-  opacity: 0.78;
+  opacity: 1;
   transition: opacity 240ms ease;
 }
 
@@ -106,8 +106,10 @@ body {
   }
 
   .admin-language {
-    position: static;
+    position: fixed;
+    top: 4.75rem;
+    right: 0.9rem;
     width: max-content;
-    margin: 0 1rem 1rem;
+    margin: 0;
   }
 }
