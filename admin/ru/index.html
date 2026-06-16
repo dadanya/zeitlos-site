@@ -1,28 +1,28 @@
 <!doctype html>
-<html lang="de">
+<html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
-  <title>Zeitlos — Verwaltung</title>
+  <title>Zeitlos — Админка</title>
   <link rel="stylesheet" href="/admin/admin.css" />
-  <link href="/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+  <link href="/admin/ru/config.yml" type="text/yaml" rel="cms-config-url" />
 </head>
 <body>
   <div class="admin-welcome" aria-hidden="true">
     <img src="/images/logo-dark.png" alt="" />
-    <p>Verwaltung</p>
-    <span>Menü, Fotos, Texte und Öffnungszeiten ruhig an einem Ort bearbeiten.</span>
+    <p>Админка</p>
+    <span>Меню, фото, тексты, контакты и часы работы удобно редактировать в одном месте.</span>
   </div>
-  <nav class="admin-language" aria-label="Sprache wechseln">
-    <a class="active" href="/admin/" aria-current="page">DE</a>
-    <a href="/admin/ru/">RU</a>
+  <nav class="admin-language" aria-label="Сменить язык">
+    <a href="/admin/">DE</a>
+    <a class="active" href="/admin/ru/" aria-current="page">RU</a>
   </nav>
 
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script src="https://unpkg.com/decap-cms@^3.6.0/dist/decap-cms.js"></script>
   <script>
-    window.ZEITLOS_ADMIN_LANG = 'de';
+    window.ZEITLOS_ADMIN_LANG = 'ru';
   </script>
   <script src="/admin/admin.js"></script>
 </body>

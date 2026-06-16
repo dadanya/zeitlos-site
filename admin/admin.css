@@ -49,10 +49,53 @@ body {
   color: rgba(26, 23, 20, 0.72);
 }
 
+.admin-language {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 20;
+  display: flex;
+  gap: 0.35rem;
+  padding: 0.35rem;
+  border: 1px solid rgba(201, 168, 124, 0.38);
+  border-radius: 999px;
+  background: rgba(247, 243, 238, 0.9);
+  box-shadow: 0 14px 42px rgba(26, 23, 20, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.admin-language a {
+  min-width: 2.4rem;
+  padding: 0.45rem 0.65rem;
+  border-radius: 999px;
+  color: rgba(26, 23, 20, 0.72);
+  font: 700 0.78rem/1 system-ui, sans-serif;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-decoration: none;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.admin-language a:hover,
+.admin-language a:focus-visible {
+  background: rgba(201, 168, 124, 0.18);
+  color: var(--espresso);
+}
+
+.admin-language a.active {
+  background: var(--espresso);
+  color: var(--milk);
+}
+
 .cms-loaded .admin-welcome {
   opacity: 0;
   transform: translateY(-0.5rem);
   transition: opacity 240ms ease, transform 240ms ease;
+}
+
+.cms-loaded .admin-language {
+  opacity: 0.78;
+  transition: opacity 240ms ease;
 }
 
 @media (max-width: 900px) {
@@ -60,5 +103,11 @@ body {
     position: static;
     margin: 1rem;
     max-width: none;
+  }
+
+  .admin-language {
+    position: static;
+    width: max-content;
+    margin: 0 1rem 1rem;
   }
 }

@@ -1,0 +1,162 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: ru
+logo_url: /images/logo-dark.png
+show_preview_links: true
+
+media_folder: "images"
+public_folder: "/images"
+
+editor:
+  preview: true
+
+collections:
+  - name: "menu"
+    label: "Меню Zeitlos и цены"
+    description: "Блюда, напитки, цены, состав, аллергены и метки на карточках."
+    files:
+      - name: "menu"
+        label: "Редактировать меню"
+        file: "data/menu.json"
+        fields:
+          - name: categories
+            label: "Разделы меню"
+            label_singular: "Раздел"
+            widget: list
+            summary: "{{fields.title}}"
+            collapsed: true
+            minimize_collapsed: true
+            hint: "Здесь находятся вкладки меню. Порядок здесь такой же, как на сайте."
+            fields:
+              - name: id
+                label: "Технический ID"
+                widget: string
+                hint: "Лучше не менять. Этот ID связывает вкладку меню с карточками."
+              - name: title
+                label: "Название раздела"
+                widget: string
+                hint: "Так раздел будет называться на сайте."
+              - name: type
+                label: "Тип карточек"
+                widget: select
+                default: "flip"
+                hint: "У блюд есть состав и аллергены на обратной стороне. У напитков простая карточка с описанием."
+                options:
+                  - { label: "Еда: карточка переворачивается, есть состав и аллергены", value: "flip" }
+                  - { label: "Напиток: обычная карточка с описанием", value: "simple" }
+              - name: items
+                label: "Позиции меню"
+                label_singular: "Позиция"
+                widget: list
+                summary: "{{fields.name}} · {{fields.price}}"
+                collapsed: true
+                minimize_collapsed: true
+                fields:
+                  - { name: name, label: "Название", widget: string, hint: "Пиши так, как название должно выглядеть на сайте." }
+                  - { name: price, label: "Цена", widget: string, hint: "Например: 3,50 €" }
+                  - { name: desc, label: "Краткое описание (только напитки)", widget: text, required: false, hint: "Для кофе, чая и лимонадов. У еды обычно можно оставить пустым." }
+                  - { name: zutaten, label: "Состав (только еда)", widget: text, required: false, hint: "Коротко и понятно. Например: курица, сыр, салат, помидор." }
+                  - { name: allergene, label: "Аллергены", widget: string, required: false, hint: "Например: A, C, G, J. Лучше проверять внимательно." }
+                  - name: tags
+                    label: "Метки"
+                    widget: select
+                    multiple: true
+                    required: false
+                    hint: "Можно выбрать несколько меток. Ставь только то, что действительно подходит."
+                    options:
+                      - { label: "Популярное", value: "popular" }
+                      - { label: "С 11:00", value: "ab11" }
+                      - { label: "Веганское", value: "vegan" }
+                      - { label: "Вегетарианское", value: "veggie" }
+                      - { label: "Можно сделать vegan", value: "vegan-mgl" }
+                      - { label: "Сезонное", value: "seasonal" }
+          - { name: legend, label: "Аллергены: расшифровка", widget: string, hint: "Эта строка объясняет буквы A, C, G и другие." }
+          - { name: legendNote, label: "Аллергены: примечание", widget: text, hint: "Короткое примечание под расшифровкой аллергенов." }
+
+  - name: "gallery"
+    label: "Галерея и фото"
+    description: "Фотографии в разделе атмосферы. Здесь можно менять фото, описание и способ обрезки."
+    files:
+      - name: "gallery"
+        label: "Редактировать фото"
+        file: "data/gallery.json"
+        fields:
+          - name: items
+            label: "Фотографии галереи"
+            label_singular: "Фото"
+            widget: list
+            summary: "{{fields.title}}"
+            collapsed: true
+            minimize_collapsed: true
+            fields:
+              - { name: title, label: "Внутреннее название", widget: string, hint: "Видно только в админке, чтобы легче найти фото." }
+              - { name: image, label: "Фото", widget: image, required: false }
+              - { name: alt, label: "Описание фото", widget: string, required: false, hint: "Коротко опиши, что на фотографии." }
+              - name: fit
+                label: "Отображение фото"
+                widget: select
+                default: "cover"
+                hint: "Заполнить блок может немного обрезать фото. Показать целиком оставляет спокойные поля."
+                options:
+                  - { label: "Заполнить блок (cover)", value: "cover" }
+                  - { label: "Показать фото целиком (contain)", value: "contain" }
+              - { name: minHeight, label: "Минимальная высота в пикселях", widget: number, value_type: int, min: 120, max: 700, default: 200, hint: "Меняй только если фото выглядит слишком маленьким или слишком большим." }
+
+  - name: "hero"
+    label: "Главный экран"
+    description: "Первое впечатление: маленький текст над логотипом и слоган под ZEITLOS."
+    files:
+      - name: "hero"
+        label: "Редактировать главный экран"
+        file: "data/hero.json"
+        fields:
+          - { name: eyebrow, label: "Маленький текст сверху", widget: string, hint: "Например: Café & Bistro · Zeitz · seit 2026" }
+          - { name: tagline, label: "Слоган под ZEITLOS", widget: string }
+
+  - name: "about"
+    label: "О нас"
+    description: "Тёплый личный текст о кафе."
+    files:
+      - name: "about"
+        label: "Редактировать текст О нас"
+        file: "data/about.json"
+        fields:
+          - { name: text, label: "Текст", widget: text, hint: "Тёплый, личный и не слишком длинный текст для раздела О нас." }
+
+  - name: "delivery"
+    label: "Заказ и доставка"
+    description: "Текст про доставку, самовывоз и Business Lunch."
+    files:
+      - name: "delivery"
+        label: "Редактировать текст доставки"
+        file: "data/delivery.json"
+        fields:
+          - { name: text, label: "Текст", widget: text, hint: "Здесь объясняется доставка, самовывоз и Business Lunch для компаний." }
+
+  - name: "contact"
+    label: "Контакты и часы работы"
+    description: "Телефон, email, адрес и часы работы."
+    files:
+      - name: "contact"
+        label: "Редактировать контакты"
+        file: "data/contact.json"
+        fields:
+          - { name: addressLine1, label: "Адрес: улица", widget: string }
+          - { name: addressLine2, label: "Адрес: индекс и город", widget: string }
+          - { name: phone, label: "Телефон на сайте", widget: string, hint: "Так номер будет показан на сайте." }
+          - { name: phoneHref, label: "Ссылка телефона", widget: string, hint: "Формат: tel:+491758961228" }
+          - { name: email, label: "E-mail на сайте", widget: string }
+          - { name: emailHref, label: "Ссылка e-mail", widget: string, hint: "Формат: mailto:zeitloszeitz@gmail.com" }
+          - name: hours
+            label: "Часы работы"
+            label_singular: "День"
+            widget: list
+            allow_add: false
+            summary: "{{fields.dayLabel}} · {{fields.time}}"
+            hint: "Дни уже заданы. Обычно нужно менять только время."
+            fields:
+              - { name: dayIndex, label: "Номер дня", widget: hidden }
+              - { name: dayLabel, label: "День", widget: string }
+              - { name: time, label: "Время работы", widget: string, hint: "Например: 07:00 – 19:00 или Geschlossen" }
