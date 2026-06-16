@@ -1,0 +1,102 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Sprache der Oberfläche
+locale: de
+
+# Hochgeladene Bilder landen im Ordner images/
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  # ── Speisekarte (data/menu.json) ───────────────────────────
+  - name: "menu"
+    label: "Speisekarte"
+    files:
+      - name: "menu"
+        label: "Menü bearbeiten"
+        file: "data/menu.json"
+        fields:
+          - name: categories
+            label: "Kategorien"
+            label_singular: "Kategorie"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: id, label: "ID (technisch — bitte nicht ändern)", widget: string, hint: "Wird intern verwendet, z. B. 'kombo'." }
+              - { name: title, label: "Titel der Kategorie", widget: string }
+              - name: type
+                label: "Anzeige-Typ"
+                widget: select
+                default: "flip"
+                options:
+                  - { label: "Speise (mit Zutaten & Allergenen, umdrehbar)", value: "flip" }
+                  - { label: "Getränk (mit Beschreibung)", value: "simple" }
+              - name: items
+                label: "Gerichte"
+                label_singular: "Gericht"
+                widget: list
+                summary: "{{fields.name}} — {{fields.price}}"
+                fields:
+                  - { name: name, label: "Name", widget: string }
+                  - { name: price, label: "Preis", widget: string, hint: "z. B. 3,50 €" }
+                  - { name: desc, label: "Beschreibung (nur Getränke)", widget: text, required: false }
+                  - { name: zutaten, label: "Zutaten (nur Speisen)", widget: text, required: false }
+                  - { name: allergene, label: "Allergene (nur Speisen)", widget: string, required: false, hint: "z. B. A, C, G, J" }
+                  - name: tags
+                    label: "Markierungen"
+                    widget: select
+                    multiple: true
+                    required: false
+                    options:
+                      - { label: "Beliebt", value: "popular" }
+                      - { label: "Ab 11 Uhr", value: "ab11" }
+                      - { label: "Vegan", value: "vegan" }
+                      - { label: "Vegetarisch", value: "veggie" }
+                      - { label: "Vegan möglich", value: "vegan-mgl" }
+                      - { label: "Saisonal", value: "seasonal" }
+          - { name: legend, label: "Allergene — Legende", widget: string }
+          - { name: legendNote, label: "Allergene — Hinweis", widget: text }
+
+  # ── Texte, Kontakt & Galerie (data/content.json) ────────────
+  - name: "inhalt"
+    label: "Texte, Kontakt & Galerie"
+    files:
+      - name: "content"
+        label: "Inhalte bearbeiten"
+        file: "data/content.json"
+        fields:
+          - name: hero
+            label: "Startbereich (Hero)"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Kleiner Text oben", widget: string }
+              - { name: tagline, label: "Slogan", widget: string }
+          - name: about
+            label: "Über uns"
+            widget: object
+            fields:
+              - { name: text, label: "Text", widget: text }
+          - name: delivery
+            label: "Bestellen & Lieferung"
+            widget: object
+            fields:
+              - { name: text, label: "Text", widget: text }
+          - name: contact
+            label: "Kontakt"
+            widget: object
+            fields:
+              - { name: addressLine1, label: "Adresse — Zeile 1", widget: string }
+              - { name: addressLine2, label: "Adresse — Zeile 2", widget: string }
+              - { name: phone, label: "Telefon (Anzeige)", widget: string }
+              - { name: phoneHref, label: "Telefon-Link", widget: string, hint: "Format: tel:+49..." }
+              - { name: email, label: "E-Mail (Anzeige)", widget: string }
+              - { name: emailHref, label: "E-Mail-Link", widget: string, hint: "Format: mailto:..." }
+          - name: gallery
+            label: "Galerie (Fotos)"
+            label_singular: "Foto"
+            widget: list
+            fields:
+              - { name: image, label: "Bild", widget: image, required: false }
+              - { name: alt, label: "Bildbeschreibung (Alt-Text)", widget: string, required: false }

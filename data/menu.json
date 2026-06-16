@@ -1,0 +1,512 @@
+{
+  "categories": [
+    {
+      "id": "kombo",
+      "title": "Kombo Menü",
+      "type": "flip",
+      "items": [
+        {
+          "name": "Kombo Hähnchen Burger",
+          "price": "10,00 €",
+          "zutaten": "Hähnchen, Käse, Salat, Tomate, Gurken, Sauce, Burger-Brötchen, Pommes Frites, Getränk 0,33 l",
+          "allergene": "A, C, G, J",
+          "tags": [
+            "popular",
+            "ab11"
+          ]
+        },
+        {
+          "name": "Kombo Rindfleisch Burger",
+          "price": "11,00 €",
+          "zutaten": "Rindfleisch, Käse, Salat, Tomate, Gurken, Sauce, Burger-Brötchen, Pommes Frites, Getränk 0,33 l",
+          "allergene": "A, C, G, J",
+          "tags": [
+            "popular",
+            "ab11"
+          ]
+        },
+        {
+          "name": "Kombo Hähnchen Wrap",
+          "price": "10,00 €",
+          "zutaten": "Hähnchenbrust, Tomate, Eisbergsalat, Sauce, Weizen-Tortilla, Pommes Frites, Getränk 0,33 l",
+          "allergene": "A, C, G, J",
+          "tags": [
+            "ab11"
+          ]
+        },
+        {
+          "name": "Hähnchen Nuggets (9 Stk.)",
+          "price": "5,00 €",
+          "zutaten": "Knusprige Hähnchen-Nuggets mit Sauce",
+          "allergene": "A, C, J",
+          "tags": []
+        },
+        {
+          "name": "Hot Dog",
+          "price": "3,50 €",
+          "zutaten": "Würstchen im Brötchen mit Ketchup, Mayonnaise und Senf",
+          "allergene": "A, C, I, J",
+          "tags": []
+        },
+        {
+          "name": "Kartoffel-Kroketten mit Sauce (7 Stk.)",
+          "price": "3,50 €",
+          "zutaten": "Knusprige Kartoffel-Kroketten mit Sauce",
+          "allergene": "A, C, G, J",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Bratwurst mit Brötchen",
+          "price": "4,00 €",
+          "zutaten": "Gegrillte Bratwurst im Brötchen mit Senf",
+          "allergene": "A, I, J",
+          "tags": []
+        },
+        {
+          "name": "Bockwurst im Brötchen",
+          "price": "4,50 €",
+          "zutaten": "Bockwurst im Brötchen, auf Wunsch mit Senf oder Sauce",
+          "allergene": "A, I, J",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "herzhaft",
+      "title": "Herzhafte Snacks",
+      "type": "flip",
+      "items": [
+        {
+          "name": "Mini-Pizza",
+          "price": "3,50 €",
+          "zutaten": "Weizenteig, Tomatensauce, Schinken, Käse, Zwiebeln und Gewürze",
+          "allergene": "A, G",
+          "tags": []
+        },
+        {
+          "name": "Würstchen im Teig",
+          "price": "2,00 €",
+          "zutaten": "Würstchen im gebackenen Teig",
+          "allergene": "A, C, G, I, J",
+          "tags": []
+        },
+        {
+          "name": "Hausgemachte Pirogge mit Fleischfüllung",
+          "price": "3,00 €",
+          "zutaten": "Hausgemachter Teig mit Fleischfüllung und Gewürzen",
+          "allergene": "A, C",
+          "tags": []
+        },
+        {
+          "name": "Hausgemachte Pirogge mit Weißkohl",
+          "price": "2,50 €",
+          "zutaten": "Hausgemachter Teig mit Weißkohlfüllung und Gewürzen",
+          "allergene": "A, C",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Hausgemachte Pirogge mit Kartoffeln und Pilzen",
+          "price": "2,80 €",
+          "zutaten": "Hausgemachter Teig mit Kartoffeln, Pilzen und Gewürzen",
+          "allergene": "A, C",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Hausgemachtes Blätterteiggebäck mit Fleischfüllung",
+          "price": "3,00 €",
+          "zutaten": "Blätterteig mit Fleischfüllung und Gewürzen",
+          "allergene": "A, C, G",
+          "tags": []
+        },
+        {
+          "name": "Brezel",
+          "price": "2,00 €",
+          "zutaten": "Brezel aus Weizenmehl",
+          "allergene": "A",
+          "tags": [
+            "vegan"
+          ]
+        },
+        {
+          "name": "Börek mit Spinat",
+          "price": "2,00 €",
+          "zutaten": "Dünner Teig mit Spinatfüllung und Gewürzen",
+          "allergene": "A",
+          "tags": [
+            "vegan"
+          ]
+        },
+        {
+          "name": "Börek mit Käse",
+          "price": "2,00 €",
+          "zutaten": "Dünner Teig mit Käsefüllung",
+          "allergene": "A, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Börek mit Hackfleisch",
+          "price": "2,50 €",
+          "zutaten": "Dünner Teig mit Hackfleischfüllung und Gewürzen",
+          "allergene": "A",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "suesses",
+      "title": "Süßes & Gebäck",
+      "type": "flip",
+      "items": [
+        {
+          "name": "Croissant",
+          "price": "1,50 €",
+          "zutaten": "Butter-Blätterteig",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Hausgemachte Blätterteigtasche mit Kirschen",
+          "price": "3,00 €",
+          "zutaten": "Blätterteig mit Kirschfüllung",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Himbeer-Pudding-Tasche",
+          "price": "2,00 €",
+          "zutaten": "Gebäck mit Himbeer- und Puddingfüllung",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Kirsch-Blätterteig",
+          "price": "2,00 €",
+          "zutaten": "Blätterteig mit Kirschfüllung",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Apfeltasche",
+          "price": "2,00 €",
+          "zutaten": "Gebäck mit Apfelfüllung und Zimt",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Teilchen mit Kirschen",
+          "price": "3,00 €",
+          "zutaten": "Süßes Gebäck mit Kirschfüllung",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Teilchen mit Quark",
+          "price": "3,00 €",
+          "zutaten": "Süßes Gebäck mit Quarkfüllung",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Syrnyky (Quarkküchlein)",
+          "price": "2,00 €",
+          "zutaten": "Quark, Eier, Weizenmehl, Zucker und Vanille",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Pfannkuchen",
+          "price": "3,50 €",
+          "zutaten": "Weizenmehl, Milch, Eier, Zucker, Salz und Öl",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Schokokuchen",
+          "price": "3,00 €",
+          "zutaten": "Weizenmehl, Zucker, Eier, Butter oder Öl, Kakao bzw. Schokolade, Backpulver",
+          "allergene": "A, C, F, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Apfelkuchen",
+          "price": "3,00 €",
+          "zutaten": "Weizenmehl, Äpfel, Zucker, Eier, Butter, Zimt und Backpulver",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Kirschkuchen",
+          "price": "3,00 €",
+          "zutaten": "Weizenmehl, Kirschen, Zucker, Eier, Butter und Backpulver",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Rhabarberkuchen",
+          "price": "3,00 €",
+          "zutaten": "Weizenmehl, Rhabarber, Zucker, Eier, Butter und Backpulver",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Pfannkuchen mit Kirschen",
+          "price": "2,00 €",
+          "zutaten": "Pfannkuchen mit Kirschfüllung",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "title": "Sandwiches & Brötchen",
+      "type": "flip",
+      "items": [
+        {
+          "name": "Sandwich mit Schinken und Käse",
+          "price": "4,50 €",
+          "zutaten": "Brot, Schinken, Käse, Gurke und Frischkäse",
+          "allergene": "A, G",
+          "tags": []
+        },
+        {
+          "name": "Sandwich mit Salami und Käse",
+          "price": "4,50 €",
+          "zutaten": "Brot, Salami, Käse, Gurke und Frischkäse",
+          "allergene": "A, G",
+          "tags": []
+        },
+        {
+          "name": "Brötchen mit Lachs und Käse",
+          "price": "4,50 €",
+          "zutaten": "Brötchen, Lachs, Käse, Gurke und Frischkäse",
+          "allergene": "A, D, G",
+          "tags": []
+        },
+        {
+          "name": "Brötchen mit Ei und Käse",
+          "price": "3,00 €",
+          "zutaten": "Brötchen, Ei, Käse und Frischkäse",
+          "allergene": "A, C, G",
+          "tags": [
+            "veggie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "salate",
+      "title": "Salate & Bowls",
+      "type": "flip",
+      "items": [
+        {
+          "name": "Frischer Weißkohlsalat",
+          "price": "2,50 €",
+          "zutaten": "Weißkohl, Gurke, Rettich, Essig-Öl-Dressing, Salz und Pfeffer",
+          "allergene": "Keine kennzeichnungspflichtigen Allergene (mit Senf im Dressing: J)",
+          "tags": [
+            "vegan"
+          ]
+        },
+        {
+          "name": "Rotkohlsalat / Coleslaw",
+          "price": "2,50 €",
+          "zutaten": "Rotkohl, Karotten, Mayonnaise, Essig, Zucker, Salz und Pfeffer",
+          "allergene": "C, J (mit Milch in der Mayonnaise: G)",
+          "tags": [
+            "veggie"
+          ]
+        },
+        {
+          "name": "Caesar Salat mit Hähnchen",
+          "price": "6,90 €",
+          "zutaten": "Hähnchenbrust, Salat, Caesar-Dressing, Croutons, Parmesan und Tomaten",
+          "allergene": "A, C, D, G, J",
+          "tags": []
+        },
+        {
+          "name": "Vegetarische Bowl",
+          "price": "6,90 €",
+          "zutaten": "Buchweizen, Pilze, Paprika, Radieschen, Salat, Kirschtomaten, Rote Bete, Feta und Kräuter",
+          "allergene": "G",
+          "tags": [
+            "veggie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kaffee",
+      "title": "Kaffee",
+      "type": "simple",
+      "items": [
+        {
+          "name": "Espresso",
+          "price": "2,00 €",
+          "desc": "Kräftig, konzentriert, aromatisch — der klassische Einstieg in den Tag.",
+          "tags": [
+            "popular"
+          ]
+        },
+        {
+          "name": "Doppio",
+          "price": "2,80 €",
+          "desc": "Doppelter Espresso — intensiv und vollmundig.",
+          "tags": []
+        },
+        {
+          "name": "Schwarz Kaffee",
+          "price": "2,50 €",
+          "desc": "Klassischer schwarzer Kaffee — pur und aromatisch.",
+          "tags": []
+        },
+        {
+          "name": "Milch Kaffee",
+          "price": "3,00 €",
+          "desc": "Milder Kaffee mit viel warmer Milch.",
+          "tags": []
+        },
+        {
+          "name": "Cappuccino",
+          "price": "3,20 / 3,80 €",
+          "desc": "Espresso mit samtig aufgeschäumter Milch. Klein 0,2 l · Groß 0,4 l.",
+          "tags": [
+            "popular"
+          ]
+        },
+        {
+          "name": "Latte Macchiato",
+          "price": "3,20 / 3,80 €",
+          "desc": "Großer Milchkaffee in verführerischen Schichten. Klein 0,2 l · Groß 0,4 l.",
+          "tags": [
+            "vegan-mgl"
+          ]
+        },
+        {
+          "name": "Flat White",
+          "price": "3,40 €",
+          "desc": "Doppelter Espresso, wenig Milch — intensiv und seidig.",
+          "tags": []
+        },
+        {
+          "name": "Heiße Schokolade",
+          "price": "3,20 / 3,80 €",
+          "desc": "Cremige heiße Schokolade. Klein 0,2 l · Groß 0,4 l.",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "kalter-kaffee",
+      "title": "Kalter Kaffee",
+      "type": "simple",
+      "items": [
+        {
+          "name": "Hummel mit Orangensaft",
+          "price": "4,20 €",
+          "desc": "Espresso mit frischem Orangensaft — erfrischend und fruchtig.",
+          "tags": [
+            "seasonal"
+          ]
+        },
+        {
+          "name": "Iced Latte",
+          "price": "3,80 €",
+          "desc": "Espresso mit kalter Milch und Eis — perfekt für warme Tage.",
+          "tags": [
+            "vegan-mgl"
+          ]
+        },
+        {
+          "name": "Coffee Tonic",
+          "price": "4,20 €",
+          "desc": "Espresso auf Tonic Water mit Eis — spritzig und überraschend.",
+          "tags": [
+            "seasonal"
+          ]
+        },
+        {
+          "name": "Kalte Schokolade",
+          "price": "3,80 €",
+          "desc": "Eisgekühlte Schokolade mit Milch — süß und cremig.",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "tee",
+      "title": "Tee",
+      "type": "simple",
+      "items": [
+        {
+          "name": "Tee",
+          "price": "2,00 €",
+          "desc": "Heißer Tee nach Auswahl — wohltuend und aromatisch.",
+          "tags": [
+            "vegan"
+          ]
+        },
+        {
+          "name": "Zitrone",
+          "price": "0,30 €",
+          "desc": "Frische Zitronenscheibe als Beilage zum Tee.",
+          "tags": []
+        }
+      ]
+    },
+    {
+      "id": "limonaden",
+      "title": "Limonaden",
+      "type": "simple",
+      "items": [
+        {
+          "name": "Hausgemachte Limonade",
+          "price": "2,00 €",
+          "desc": "Erfrischende Limonade nach eigenem Rezept — frisch zubereitet.",
+          "tags": [
+            "vegan",
+            "popular"
+          ]
+        }
+      ]
+    }
+  ],
+  "legend": "A – Glutenhaltiges Getreide · C – Eier · D – Fisch · F – Sojabohnen · G – Milch / Laktose · I – Sellerie · J – Senf",
+  "legendNote": "Angaben zu Zutaten und Allergenen ohne Gewähr. Bei Fragen oder Unverträglichkeiten sprechen Sie bitte unser Team an."
+}

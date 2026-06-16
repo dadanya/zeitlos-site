@@ -1264,7 +1264,7 @@
     <div class="hero__content">
       <span class="hero__eyebrow">Café & Bistro · Zeitz · seit 2026</span>
       <h1 class="hero__title">ZEIT<em>LOS</em></h1>
-      <p class="hero__tagline">Wo jeder Moment zählt — Kaffee, Küche & Herzlichkeit</p>
+      <p class="hero__tagline" data-bind="hero.tagline">Wo jeder Moment zählt — Kaffee, Küche & Herzlichkeit</p>
 
       <div class="hero__actions">
         <!-- Кнопка "Меню" -->
@@ -1308,9 +1308,9 @@
           <span class="section-label fade-up">Über uns</span>
           <h2 class="section-title fade-up">Ein Ort zum<br><em>Verweilen</em></h2>
           <div class="divider fade-up"></div>
-          <p class="section-subtitle fade-up">
-            Mitten in Zeitz, direkt am Bahnhof, haben wir 2026 einen Ort eröffnet, an dem Zeit keine Rolle spielt. 
-            Im Zeitlos treffen ukrainische Gastfreundschaft und deutsche Herzlichkeit aufeinander — 
+          <p class="section-subtitle fade-up" data-bind="about.text">
+            Mitten in Zeitz, direkt am Bahnhof, haben wir 2026 einen Ort eröffnet, an dem Zeit keine Rolle spielt.
+            Im Zeitlos treffen ukrainische Gastfreundschaft und deutsche Herzlichkeit aufeinander —
             bei einer Tasse Kaffee, einem herzhaften Frühstück oder einem Stück unserer hausgemachten Backwaren.
           </p>
 
@@ -1362,837 +1362,11 @@
       <div class="divider"></div>
       <p class="section-subtitle">Frisch zubereitet, mit Liebe gemacht — Kombo-Menüs ab 11:00 Uhr und hausgemachter Kaffee.</p>
 
-      <!-- Вкладки категорий -->
-      <div class="menu__tabs" role="tablist" aria-label="Menükategorien">
-        <button class="menu__tab active" role="tab" aria-selected="true" data-target="kombo">Kombo Menü</button>
-        <button class="menu__tab" role="tab" aria-selected="false" data-target="herzhaft">Herzhafte Snacks</button>
-        <button class="menu__tab" role="tab" aria-selected="false" data-target="suesses">Süßes & Gebäck</button>
-        <button class="menu__tab" role="tab" aria-selected="false" data-target="sandwiches">Sandwiches & Brötchen</button>
-        <button class="menu__tab" role="tab" aria-selected="false" data-target="salate">Salate & Bowls</button>
-        <button class="menu__tab" role="tab" aria-selected="false" data-target="kaffee">Kaffee</button>
-        <button class="menu__tab" role="tab" aria-selected="false" data-target="kalter-kaffee">Kalter Kaffee</button>
-        <button class="menu__tab" role="tab" aria-selected="false" data-target="tee">Tee</button>
-        <button class="menu__tab" role="tab" aria-selected="false" data-target="limonaden">Limonaden</button>
-      </div>
-
-      <!-- ── KOMBO MENÜ ────────────────────────────────────── -->
-      <div class="menu__panel active menu__grid" id="kombo" role="tabpanel">
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Kombo Hähnchen Burger, 10 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Kombo Hähnchen Burger</h3><span class="menu-card__price">10,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--popular">Popular</span><span class="tag tag--new">Ab 11 Uhr</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Hähnchen, Käse, Salat, Tomate, Gurken, Sauce, Burger-Brötchen, Pommes Frites, Getränk 0,33 l</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G, J</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Kombo Rindfleisch Burger, 11 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Kombo Rindfleisch Burger</h3><span class="menu-card__price">11,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--popular">Popular</span><span class="tag tag--new">Ab 11 Uhr</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Rindfleisch, Käse, Salat, Tomate, Gurken, Sauce, Burger-Brötchen, Pommes Frites, Getränk 0,33 l</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G, J</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Kombo Hähnchen Wrap, 10 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Kombo Hähnchen Wrap</h3><span class="menu-card__price">10,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--new">Ab 11 Uhr</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Hähnchenbrust, Tomate, Eisbergsalat, Sauce, Weizen-Tortilla, Pommes Frites, Getränk 0,33 l</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G, J</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hähnchen Nuggets 9 Stück, 5 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Hähnchen Nuggets (9 Stk.)</h3><span class="menu-card__price">5,00 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Knusprige Hähnchen-Nuggets mit Sauce</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, J</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hot Dog, 3,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Hot Dog</h3><span class="menu-card__price">3,50 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Würstchen im Brötchen mit Ketchup, Mayonnaise und Senf</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, I, J</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Kartoffel-Kroketten mit Sauce 7 Stück, 3,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Kartoffel-Kroketten mit Sauce (7 Stk.)</h3><span class="menu-card__price">3,50 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Knusprige Kartoffel-Kroketten mit Sauce</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G, J</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Bratwurst mit Brötchen, 4 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Bratwurst mit Brötchen</h3><span class="menu-card__price">4,00 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Gegrillte Bratwurst im Brötchen mit Senf</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, I, J</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Bockwurst im Brötchen, 4,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Bockwurst im Brötchen</h3><span class="menu-card__price">4,50 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Bockwurst im Brötchen, auf Wunsch mit Senf oder Sauce</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, I, J</p>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- ── HERZHAFTE SNACKS (Flip-Karten: Tippen für Zutaten & Allergene) ── -->
-      <div class="menu__panel menu__grid" id="herzhaft" role="tabpanel">
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Mini-Pizza, 3,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Mini-Pizza</h3><span class="menu-card__price">3,50 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Weizenteig, Tomatensauce, Schinken, Käse, Zwiebeln und Gewürze</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Würstchen im Teig, 2,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Würstchen im Teig</h3><span class="menu-card__price">2,00 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Würstchen im gebackenen Teig</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G, I, J</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hausgemachte Pirogge mit Fleischfüllung, 3,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Hausgemachte Pirogge mit Fleischfüllung</h3><span class="menu-card__price">3,00 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Hausgemachter Teig mit Fleischfüllung und Gewürzen</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hausgemachte Pirogge mit Weißkohl, 2,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Hausgemachte Pirogge mit Weißkohl</h3><span class="menu-card__price">2,50 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Hausgemachter Teig mit Weißkohlfüllung und Gewürzen</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hausgemachte Pirogge mit Kartoffeln und Pilzen, 2,80 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Hausgemachte Pirogge mit Kartoffeln und Pilzen</h3><span class="menu-card__price">2,80 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Hausgemachter Teig mit Kartoffeln, Pilzen und Gewürzen</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hausgemachtes Blätterteiggebäck mit Fleischfüllung, 3,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Hausgemachtes Blätterteiggebäck mit Fleischfüllung</h3><span class="menu-card__price">3,00 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Blätterteig mit Fleischfüllung und Gewürzen</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Brezel, 2,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Brezel</h3><span class="menu-card__price">2,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--vegan">Vegan</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Brezel aus Weizenmehl</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Börek mit Spinat, 2,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Börek mit Spinat</h3><span class="menu-card__price">2,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--vegan">Vegan</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Dünner Teig mit Spinatfüllung und Gewürzen</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Börek mit Käse, 2,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Börek mit Käse</h3><span class="menu-card__price">2,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Dünner Teig mit Käsefüllung</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Börek mit Hackfleisch, 2,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Börek mit Hackfleisch</h3><span class="menu-card__price">2,50 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Dünner Teig mit Hackfleischfüllung und Gewürzen</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A</p>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- ── SÜSSES & GEBÄCK (Flip-Karten: Tippen für Zutaten & Allergene) ── -->
-      <div class="menu__panel menu__grid" id="suesses" role="tabpanel">
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Croissant, 1,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Croissant</h3><span class="menu-card__price">1,50 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Butter-Blätterteig</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hausgemachte Blätterteigtasche mit Kirschen, 3,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Hausgemachte Blätterteigtasche mit Kirschen</h3><span class="menu-card__price">3,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Blätterteig mit Kirschfüllung</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Himbeer-Pudding-Tasche, 2,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Himbeer-Pudding-Tasche</h3><span class="menu-card__price">2,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Gebäck mit Himbeer- und Puddingfüllung</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Kirsch-Blätterteig, 2,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Kirsch-Blätterteig</h3><span class="menu-card__price">2,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Blätterteig mit Kirschfüllung</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Apfeltasche, 2,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Apfeltasche</h3><span class="menu-card__price">2,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Gebäck mit Apfelfüllung und Zimt</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Teilchen mit Kirschen, 3,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Teilchen mit Kirschen</h3><span class="menu-card__price">3,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Süßes Gebäck mit Kirschfüllung</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Teilchen mit Quark, 3,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Teilchen mit Quark</h3><span class="menu-card__price">3,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Süßes Gebäck mit Quarkfüllung</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Syrnyky (Quarkküchlein), 2,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Syrnyky (Quarkküchlein)</h3><span class="menu-card__price">2,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Quark, Eier, Weizenmehl, Zucker und Vanille</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Pfannkuchen, 3,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Pfannkuchen</h3><span class="menu-card__price">3,50 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Weizenmehl, Milch, Eier, Zucker, Salz und Öl</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Schokokuchen, 3,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Schokokuchen</h3><span class="menu-card__price">3,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Weizenmehl, Zucker, Eier, Butter oder Öl, Kakao bzw. Schokolade, Backpulver</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, F, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Apfelkuchen, 3,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Apfelkuchen</h3><span class="menu-card__price">3,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Weizenmehl, Äpfel, Zucker, Eier, Butter, Zimt und Backpulver</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Kirschkuchen, 3,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Kirschkuchen</h3><span class="menu-card__price">3,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Weizenmehl, Kirschen, Zucker, Eier, Butter und Backpulver</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Rhabarberkuchen, 3,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Rhabarberkuchen</h3><span class="menu-card__price">3,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Weizenmehl, Rhabarber, Zucker, Eier, Butter und Backpulver</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Pfannkuchen mit Kirschen, 2,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Pfannkuchen mit Kirschen</h3><span class="menu-card__price">2,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Pfannkuchen mit Kirschfüllung</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- ── SANDWICHES & BRÖTCHEN (Flip-Karten: Tippen für Zutaten & Allergene) ── -->
-      <div class="menu__panel menu__grid" id="sandwiches" role="tabpanel">
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Sandwich mit Schinken und Käse, 4,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Sandwich mit Schinken und Käse</h3><span class="menu-card__price">4,50 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Brot, Schinken, Käse, Gurke und Frischkäse</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Sandwich mit Salami und Käse, 4,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Sandwich mit Salami und Käse</h3><span class="menu-card__price">4,50 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Brot, Salami, Käse, Gurke und Frischkäse</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Brötchen mit Lachs und Käse, 4,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Brötchen mit Lachs und Käse</h3><span class="menu-card__price">4,50 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Brötchen, Lachs, Käse, Gurke und Frischkäse</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, D, G</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Brötchen mit Ei und Käse, 3,00 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Brötchen mit Ei und Käse</h3><span class="menu-card__price">3,00 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Brötchen, Ei, Käse und Frischkäse</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, G</p>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- ── SALATE & BOWLS (Flip-Karten: Tippen für Zutaten & Allergene) ── -->
-      <div class="menu__panel menu__grid" id="salate" role="tabpanel">
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Frischer Weißkohlsalat, 2,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Frischer Weißkohlsalat</h3><span class="menu-card__price">2,50 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--vegan">Vegan</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Weißkohl, Gurke, Rettich, Essig-Öl-Dressing, Salz und Pfeffer</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">Keine kennzeichnungspflichtigen Allergene (mit Senf im Dressing: J)</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Rotkohlsalat / Coleslaw, 2,50 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Rotkohlsalat / Coleslaw</h3><span class="menu-card__price">2,50 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Rotkohl, Karotten, Mayonnaise, Essig, Zucker, Salz und Pfeffer</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">C, J (mit Milch in der Mayonnaise: G)</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Caesar Salat mit Hähnchen, 6,90 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Caesar Salat mit Hähnchen</h3><span class="menu-card__price">6,90 €</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Hähnchenbrust, Salat, Caesar-Dressing, Croutons, Parmesan und Tomaten</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">A, C, D, G, J</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Vegetarische Bowl, 6,90 Euro. Tippen für Zutaten und Allergene">
-          <div class="flip-card__inner">
-            <div class="flip-card__front">
-              <div class="menu-card__header"><h3 class="menu-card__name">Vegetarische Bowl</h3><span class="menu-card__price">6,90 €</span></div>
-              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
-              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
-            </div>
-            <div class="flip-card__back">
-              <p class="flip-card__label">Zutaten</p>
-              <p class="flip-card__text">Buchweizen, Pilze, Paprika, Radieschen, Salat, Kirschtomaten, Rote Bete, Feta und Kräuter</p>
-              <p class="flip-card__label">Allergene</p>
-              <p class="flip-card__text">G</p>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- ── KAFFEE ────────────────────────────────────────── -->
-      <div class="menu__panel menu__grid" id="kaffee" role="tabpanel">
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Espresso</h3>
-            <span class="menu-card__price">2,00 €</span>
-          </div>
-          <p class="menu-card__desc">Kräftig, konzentriert, aromatisch — der klassische Einstieg in den Tag.</p>
-          <div class="menu-card__tags"><span class="tag tag--popular">Popular</span></div>
-        </article>
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Doppio</h3>
-            <span class="menu-card__price">2,80 €</span>
-          </div>
-          <p class="menu-card__desc">Doppelter Espresso — intensiv und vollmundig.</p>
-          <div class="menu-card__tags"></div>
-        </article>
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Schwarz Kaffee</h3>
-            <span class="menu-card__price">2,50 €</span>
-          </div>
-          <p class="menu-card__desc">Klassischer schwarzer Kaffee — pur und aromatisch.</p>
-          <div class="menu-card__tags"></div>
-        </article>
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Milch Kaffee</h3>
-            <span class="menu-card__price">3,00 €</span>
-          </div>
-          <p class="menu-card__desc">Milder Kaffee mit viel warmer Milch.</p>
-          <div class="menu-card__tags"></div>
-        </article>
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Cappuccino</h3>
-            <span class="menu-card__price">3,20 / 3,80 €</span>
-          </div>
-          <p class="menu-card__desc">Espresso mit samtig aufgeschäumter Milch. Klein 0,2 l · Groß 0,4 l.</p>
-          <div class="menu-card__tags"><span class="tag tag--popular">Popular</span></div>
-        </article>
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Latte Macchiato</h3>
-            <span class="menu-card__price">3,20 / 3,80 €</span>
-          </div>
-          <p class="menu-card__desc">Großer Milchkaffee in verführerischen Schichten. Klein 0,2 l · Groß 0,4 l.</p>
-          <div class="menu-card__tags"><span class="tag tag--vegan">Vegan mögl.</span></div>
-        </article>
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Flat White</h3>
-            <span class="menu-card__price">3,40 €</span>
-          </div>
-          <p class="menu-card__desc">Doppelter Espresso, wenig Milch — intensiv und seidig.</p>
-          <div class="menu-card__tags"></div>
-        </article>
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Heiße Schokolade</h3>
-            <span class="menu-card__price">3,20 / 3,80 €</span>
-          </div>
-          <p class="menu-card__desc">Cremige heiße Schokolade. Klein 0,2 l · Groß 0,4 l.</p>
-          <div class="menu-card__tags"></div>
-        </article>
-
-      </div>
-
-      <!-- ── KALTER KAFFEE ─────────────────────────────────── -->
-      <div class="menu__panel menu__grid" id="kalter-kaffee" role="tabpanel">
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Hummel mit Orangensaft</h3>
-            <span class="menu-card__price">4,20 €</span>
-          </div>
-          <p class="menu-card__desc">Espresso mit frischem Orangensaft — erfrischend und fruchtig.</p>
-          <div class="menu-card__tags"><span class="tag tag--new">Seasonal</span></div>
-        </article>
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Iced Latte</h3>
-            <span class="menu-card__price">3,80 €</span>
-          </div>
-          <p class="menu-card__desc">Espresso mit kalter Milch und Eis — perfekt für warme Tage.</p>
-          <div class="menu-card__tags"><span class="tag tag--vegan">Vegan mögl.</span></div>
-        </article>
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Coffee Tonic</h3>
-            <span class="menu-card__price">4,20 €</span>
-          </div>
-          <p class="menu-card__desc">Espresso auf Tonic Water mit Eis — spritzig und überraschend.</p>
-          <div class="menu-card__tags"><span class="tag tag--new">Seasonal</span></div>
-        </article>
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Kalte Schokolade</h3>
-            <span class="menu-card__price">3,80 €</span>
-          </div>
-          <p class="menu-card__desc">Eisgekühlte Schokolade mit Milch — süß und cremig.</p>
-          <div class="menu-card__tags"></div>
-        </article>
-
-      </div>
-
-      <!-- ── TEE ───────────────────────────────────────────── -->
-      <div class="menu__panel menu__grid" id="tee" role="tabpanel">
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Tee</h3>
-            <span class="menu-card__price">2,00 €</span>
-          </div>
-          <p class="menu-card__desc">Heißer Tee nach Auswahl — wohltuend und aromatisch.</p>
-          <div class="menu-card__tags"><span class="tag tag--vegan">Vegan</span></div>
-        </article>
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Zitrone</h3>
-            <span class="menu-card__price">0,30 €</span>
-          </div>
-          <p class="menu-card__desc">Frische Zitronenscheibe als Beilage zum Tee.</p>
-          <div class="menu-card__tags"></div>
-        </article>
-
-      </div>
-
-      <!-- ── LIMONADEN ─────────────────────────────────────── -->
-      <div class="menu__panel menu__grid" id="limonaden" role="tabpanel">
-
-        <article class="menu-card fade-up">
-          <div class="menu-card__header">
-            <h3 class="menu-card__name">Hausgemachte Limonade</h3>
-            <span class="menu-card__price">2,00 €</span>
-          </div>
-          <p class="menu-card__desc">Erfrischende Limonade nach eigenem Rezept — frisch zubereitet.</p>
-          <div class="menu-card__tags"><span class="tag tag--vegan">Vegan</span><span class="tag tag--popular">Popular</span></div>
-        </article>
-
-      </div>
-
-      <!-- Легенда аллергенов -->
-      <div class="menu__legend fade-up">
-        <p class="menu__legend-title">Allergene-Kennzeichnung</p>
-        <p class="menu__legend-text">
-          A – Glutenhaltiges Getreide · C – Eier · D – Fisch · F – Sojabohnen ·
-          G – Milch / Laktose · I – Sellerie · J – Senf
-        </p>
-        <p class="menu__legend-note">Angaben zu Zutaten und Allergenen ohne Gewähr. Bei Fragen oder Unverträglichkeiten sprechen Sie bitte unser Team an.</p>
-      </div>
+      <!-- Меню рендерится из data/menu.json (управляется через /admin) -->
+      <div id="menu-app"></div>
     </div>
   </section>
+
 
   <!-- ============================================================
        BESTELLEN & LIEFERUNG
@@ -2204,7 +1378,7 @@
       <div class="divider fade-up"></div>
 
       <div class="delivery__intro">
-        <p class="delivery__text fade-up">
+        <p class="delivery__text fade-up" data-bind="delivery.text">
           Ob Mittagspause im Büro, ein gemütliches Essen zu Hause oder ein Business Lunch für Ihr Team —
           bei Zeitlos bereiten wir alles frisch und mit Liebe zu. Bestellen Sie ganz bequem telefonisch
           oder per WhatsApp. Wir liefern nach Absprache oder halten Ihre Bestellung zur Abholung direkt
@@ -2262,31 +1436,31 @@
 
       <div class="gallery__grid" role="list" aria-label="Fotogalerie">
 
-        <div class="gallery-item fade-up" role="listitem">
+        <div class="gallery-item fade-up" role="listitem" data-gallery="0" data-fit="contain" data-minh="420">
           <img src="images/interior2.jpg" alt="Zeitlos Café Innenbereich mit ZEITLOS-Schriftzug und Theke" style="width:100%;height:100%;object-fit:contain;background:var(--linen);min-height:420px;" />
         </div>
 
-        <div class="gallery-item fade-up" role="listitem">
+        <div class="gallery-item fade-up" role="listitem" data-gallery="1" data-fit="cover" data-minh="200">
           <div class="placeholder" role="img" aria-label="Foto: Kaffee">Specialty Coffee</div>
         </div>
 
-        <div class="gallery-item fade-up" role="listitem">
+        <div class="gallery-item fade-up" role="listitem" data-gallery="2" data-fit="cover" data-minh="200">
           <div class="placeholder" role="img" aria-label="Foto: Theke">Unsere Theke</div>
         </div>
 
-        <div class="gallery-item fade-up" role="listitem">
+        <div class="gallery-item fade-up" role="listitem" data-gallery="3" data-fit="cover" data-minh="200">
           <img src="images/interior3_crop.jpg" alt="Wandkunst im Zeitlos — Zug-Gemälde mit Zeitz-Motiv" style="width:100%;height:100%;object-fit:cover;min-height:200px;" />
         </div>
 
-        <div class="gallery-item fade-up" role="listitem">
+        <div class="gallery-item fade-up" role="listitem" data-gallery="4" data-fit="cover" data-minh="200">
           <img src="images/food1_crop.jpg" alt="Frühstück im Zeitlos" style="width:100%;height:100%;object-fit:cover;min-height:200px;" />
         </div>
 
-        <div class="gallery-item fade-up" role="listitem">
+        <div class="gallery-item fade-up" role="listitem" data-gallery="5" data-fit="contain" data-minh="220">
           <img src="images/interior4.jpg" alt="Zeitlos Café — Wand mit ZEITLOS-Schriftzug, Uhr und gerahmten Zeitz-Motiven" style="width:100%;height:100%;object-fit:contain;background:var(--linen);min-height:220px;" />
         </div>
 
-        <div class="gallery-item fade-up" role="listitem">
+        <div class="gallery-item fade-up" role="listitem" data-gallery="6" data-fit="contain" data-minh="220">
           <img src="images/team.jpg" alt="Das Team von Zeitlos vor dem Café" style="width:100%;height:100%;object-fit:contain;background:var(--linen);min-height:220px;" />
         </div>
 
@@ -2319,14 +1493,14 @@
           <div class="contact-block fade-up">
             <p class="contact-block__label">Telefon</p>
             <p class="contact-block__value" style="font-family:var(--font-body); font-size:1rem; font-weight:500;">
-              <a href="tel:+491758961228">0175 8961228</a>
+              <a href="tel:+491758961228" data-bind="contact.phone" data-bind-href="contact.phoneHref">0175 8961228</a>
             </p>
           </div>
 
           <div class="contact-block fade-up">
             <p class="contact-block__label">E-Mail</p>
             <p class="contact-block__value" style="font-family:var(--font-body); font-size:1rem; font-weight:500;">
-              <a href="mailto:zeitloszeitz@gmail.com">zeitloszeitz@gmail.com</a>
+              <a href="mailto:zeitloszeitz@gmail.com" data-bind="contact.email" data-bind-href="contact.emailHref">zeitloszeitz@gmail.com</a>
             </p>
           </div>
 
@@ -2468,64 +1642,151 @@
       });
     });
 
-    // ── Вкладки меню ────────────────────────────────────────
-    const tabs   = document.querySelectorAll('.menu__tab');
-    const panels = document.querySelectorAll('.menu__panel');
+    // ── Анимация появления при скролле (общий наблюдатель) ──
+    const fadeObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    function observeFadeUps(root) {
+      (root || document).querySelectorAll('.fade-up').forEach(el => fadeObserver.observe(el));
+    }
+    observeFadeUps();
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
-        panels.forEach(p => p.classList.remove('active'));
+    // ── Меню рендерится из data/menu.json (управляется через /admin) ──
+    const TAGMAP = {
+      popular:    { label: 'Popular',      cls: 'tag--popular' },
+      ab11:       { label: 'Ab 11 Uhr',    cls: 'tag--new' },
+      vegan:      { label: 'Vegan',        cls: 'tag--vegan' },
+      veggie:     { label: 'Vegetarisch',  cls: 'tag--veggie' },
+      'vegan-mgl':{ label: 'Vegan mögl.',  cls: 'tag--vegan' },
+      seasonal:   { label: 'Seasonal',     cls: 'tag--new' },
+    };
+    const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    function tagsHtml(tags) {
+      if (!tags || !tags.length) return '';
+      const inner = tags.map(t => { const m = TAGMAP[t]; return m ? `<span class="tag ${m.cls}">${m.label}</span>` : ''; }).join('');
+      return inner ? `<div class="menu-card__tags">${inner}</div>` : '';
+    }
+    function flipCard(it) {
+      const aria = `${it.name}, ${it.price}. Tippen für Zutaten und Allergene`;
+      return `<article class="flip-card fade-up" tabindex="0" role="button" aria-label="${esc(aria)}">
+        <div class="flip-card__inner">
+          <div class="flip-card__front">
+            <div class="menu-card__header"><h3 class="menu-card__name">${esc(it.name)}</h3><span class="menu-card__price">${esc(it.price)}</span></div>
+            ${tagsHtml(it.tags)}
+            <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+          </div>
+          <div class="flip-card__back">
+            <p class="flip-card__label">Zutaten</p>
+            <p class="flip-card__text">${esc(it.zutaten)}</p>
+            <p class="flip-card__label">Allergene</p>
+            <p class="flip-card__text">${esc(it.allergene)}</p>
+          </div>
+        </div>
+      </article>`;
+    }
+    function simpleCard(it) {
+      return `<article class="menu-card fade-up">
+        <div class="menu-card__header"><h3 class="menu-card__name">${esc(it.name)}</h3><span class="menu-card__price">${esc(it.price)}</span></div>
+        ${it.desc ? `<p class="menu-card__desc">${esc(it.desc)}</p>` : ''}
+        ${tagsHtml(it.tags)}
+      </article>`;
+    }
+    function initMenuInteractions() {
+      const tabs   = document.querySelectorAll('.menu__tab');
+      const panels = document.querySelectorAll('.menu__panel');
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+          panels.forEach(p => p.classList.remove('active'));
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          const target = document.getElementById(tab.dataset.target);
+          if (target) {
+            target.classList.add('active');
+            target.querySelectorAll('.flip-card.flipped').forEach(c => c.classList.remove('flipped'));
+            target.querySelectorAll('.fade-up').forEach(el => {
+              el.classList.remove('visible');
+              requestAnimationFrame(() => el.classList.add('visible'));
+            });
+          }
+        });
+      });
+      document.querySelectorAll('.flip-card').forEach(card => {
+        const toggle = () => card.classList.toggle('flipped');
+        card.addEventListener('click', toggle);
+        card.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+        });
+      });
+    }
+    function renderMenu(data) {
+      const app = document.getElementById('menu-app');
+      if (!app) return;
+      const tabsHtml = data.categories.map((c, i) =>
+        `<button class="menu__tab${i === 0 ? ' active' : ''}" role="tab" aria-selected="${i === 0}" data-target="${c.id}">${esc(c.title)}</button>`
+      ).join('');
+      const panelsHtml = data.categories.map((c, i) => {
+        const cards = c.items.map(it => c.type === 'flip' ? flipCard(it) : simpleCard(it)).join('\n');
+        return `<div class="menu__panel${i === 0 ? ' active' : ''} menu__grid" id="${c.id}" role="tabpanel">${cards}</div>`;
+      }).join('\n');
+      const legend = `<div class="menu__legend fade-up"><p class="menu__legend-title">Allergene-Kennzeichnung</p><p class="menu__legend-text">${esc(data.legend)}</p><p class="menu__legend-note">${esc(data.legendNote)}</p></div>`;
+      app.innerHTML = `<div class="menu__tabs" role="tablist" aria-label="Menükategorien">${tabsHtml}</div>${panelsHtml}${legend}`;
+      initMenuInteractions();
+      observeFadeUps(app);
+      app.querySelectorAll('.menu__panel.active .fade-up').forEach(el => el.classList.add('visible'));
+    }
+    fetch('data/menu.json')
+      .then(r => r.json())
+      .then(renderMenu)
+      .catch(err => {
+        console.error('Menü konnte nicht geladen werden:', err);
+        const app = document.getElementById('menu-app');
+        if (app) app.innerHTML = '<p style="color:var(--warm-gray)">Menü wird in Kürze geladen …</p>';
+      });
 
-        tab.classList.add('active');
-        tab.setAttribute('aria-selected', 'true');
-
-        const target = document.getElementById(tab.dataset.target);
-        if (target) {
-          target.classList.add('active');
-          // Сброс перевёрнутых карточек при переключении вкладки
-          target.querySelectorAll('.flip-card.flipped').forEach(c => c.classList.remove('flipped'));
-          // Повторный запуск анимаций fade-up при переключении вкладки
-          target.querySelectorAll('.fade-up').forEach(el => {
-            el.classList.remove('visible');
-            requestAnimationFrame(() => el.classList.add('visible'));
+    // ── Тексты, контакты и галерея из data/content.json (управляется через /admin) ──
+    fetch('data/content.json')
+      .then(r => r.json())
+      .then(c => {
+        const get = p => p.split('.').reduce((o, k) => (o == null ? undefined : o[k]), c);
+        document.querySelectorAll('[data-bind]').forEach(el => {
+          const v = get(el.dataset.bind); if (v != null) el.textContent = v;
+        });
+        document.querySelectorAll('[data-bind-href]').forEach(el => {
+          const v = get(el.dataset.bindHref); if (v != null) el.setAttribute('href', v);
+        });
+        if (Array.isArray(c.gallery)) {
+          document.querySelectorAll('[data-gallery]').forEach(slot => {
+            const g = c.gallery[+slot.dataset.gallery];
+            if (g && g.image) {
+              const alt = (g.alt || '').replace(/"/g, '&quot;');
+              const fit = slot.dataset.fit || 'cover';
+              const minh = slot.dataset.minh || '200';
+              const bg = fit === 'contain' ? 'background:var(--linen);' : '';
+              slot.innerHTML = `<img src="${g.image}" alt="${alt}" style="width:100%;height:100%;object-fit:${fit};${bg}min-height:${minh}px;" />`;
+            }
           });
         }
-      });
-    });
-
-    // ── Flip-карточки: клик / Enter / Space переворачивает ──
-    document.querySelectorAll('.flip-card').forEach(card => {
-      const toggle = () => card.classList.toggle('flipped');
-      card.addEventListener('click', toggle);
-      card.addEventListener('keydown', e => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
-      });
-    });
-
-    // ── Анимация появления при скролле ─────────────────────
-    const fadeEls = document.querySelectorAll('.fade-up');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-    fadeEls.forEach(el => observer.observe(el));
-
-    // Запускаем сразу для карточек активной вкладки меню
-    document.querySelectorAll('.menu__panel.active .fade-up').forEach(el => {
-      el.classList.add('visible');
-    });
+      })
+      .catch(e => console.error('Inhalt konnte nicht geladen werden:', e));
 
     // ── Подсветка текущего дня в расписании ────────────────
     const todayNum = new Date().getDay(); // 0=Вс, 1=Пн, ..., 6=Сб
     document.querySelectorAll(`[data-day="${todayNum}"]`).forEach(el => {
       el.classList.add('today');
     });
+  </script>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', user => {
+        if (!user) {
+          window.netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
   </script>
 
 </body>
