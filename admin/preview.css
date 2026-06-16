@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  background: #1a1714;
+  color: #f7f3ee;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.zeitlos-preview {
+  padding: 28px;
+  background: #1a1714;
+  min-height: 100vh;
+}
+
+.zeitlos-preview h1,
+.zeitlos-preview h2,
+.zeitlos-preview h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.zeitlos-preview__eyebrow {
+  margin: 0 0 0.7rem;
+  color: #c9a87c;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.zeitlos-preview__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.zeitlos-preview-card {
+  min-height: 160px;
+  padding: 20px;
+  border: 1px solid rgba(201, 168, 124, 0.3);
+  border-radius: 10px;
+  background: rgba(247, 243, 238, 0.06);
+}
+
+.zeitlos-preview-card__top {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.zeitlos-preview-card__name {
+  color: #f7f3ee;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.zeitlos-preview-card__price {
+  color: #c9a87c;
+  white-space: nowrap;
+}
+
+.zeitlos-preview-card__text {
+  margin: 0.6rem 0 0;
+  color: rgba(247, 243, 238, 0.74);
+  font-size: 0.88rem;
+  line-height: 1.48;
+}
+
+.zeitlos-preview-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.zeitlos-preview-tag {
+  padding: 0.16rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(201, 168, 124, 0.18);
+  color: #c9a87c;
+  font-size: 0.66rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.zeitlos-preview-text {
+  max-width: 760px;
+  color: rgba(26, 23, 20, 0.78);
+  background: #f7f3ee;
+  padding: 28px;
+  border-radius: 12px;
+  line-height: 1.65;
+}
+
+.zeitlos-preview-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.zeitlos-preview-gallery img,
+.zeitlos-preview-gallery__empty {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #eae3d6;
+}
+
+.zeitlos-preview-gallery__empty {
+  display: grid;
+  place-items: center;
+  color: rgba(26, 23, 20, 0.5);
+}

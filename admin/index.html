@@ -5,21 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>Zeitlos — Verwaltung</title>
+  <link rel="stylesheet" href="/admin/admin.css" />
 </head>
 <body>
-  <!-- Netlify Identity (Login) -->
+  <div class="admin-welcome" aria-hidden="true">
+    <img src="/images/logo-dark.png" alt="" />
+    <p>Verwaltung</p>
+    <span>Menü, Fotos, Texte und Öffnungszeiten ruhig an einem Ort bearbeiten.</span>
+  </div>
+
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <!-- Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.6.0/dist/decap-cms.js"></script>
-  <script>
-    // Nach Einladung/Login zurück zum Admin leiten
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
-        if (!user) {
-          window.netlifyIdentity.on('login', () => { document.location.href = '/admin/'; });
-        }
-      });
-    }
-  </script>
+  <script src="/admin/admin.js"></script>
 </body>
 </html>

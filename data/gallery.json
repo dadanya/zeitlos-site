@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "title": "Café Interieur",
+      "image": "images/interior2.jpg",
+      "alt": "Zeitlos Café Innenbereich mit ZEITLOS-Schriftzug und Theke",
+      "fit": "contain",
+      "minHeight": 420
+    },
+    {
+      "title": "Specialty Coffee",
+      "image": "",
+      "alt": "Specialty Coffee",
+      "fit": "cover",
+      "minHeight": 200
+    },
+    {
+      "title": "Unsere Theke",
+      "image": "",
+      "alt": "Unsere Theke",
+      "fit": "cover",
+      "minHeight": 200
+    },
+    {
+      "title": "Zeitz-Motiv",
+      "image": "images/interior3_crop.jpg",
+      "alt": "Wandkunst im Zeitlos — Zug-Gemälde mit Zeitz-Motiv",
+      "fit": "cover",
+      "minHeight": 200
+    },
+    {
+      "title": "Fr?hst?ck",
+      "image": "images/food1_crop.jpg",
+      "alt": "Frühstück im Zeitlos",
+      "fit": "cover",
+      "minHeight": 200
+    },
+    {
+      "title": "Zeitlos Wand",
+      "image": "images/interior4.jpg",
+      "alt": "Zeitlos Café — Wand mit ZEITLOS-Schriftzug, Uhr und gerahmten Zeitz-Motiven",
+      "fit": "contain",
+      "minHeight": 220
+    },
+    {
+      "title": "Team",
+      "image": "images/team.jpg",
+      "alt": "Das Team von Zeitlos vor dem Café",
+      "fit": "contain",
+      "minHeight": 220
+    }
+  ]
+}

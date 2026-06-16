@@ -1,0 +1,45 @@
+{
+  "addressLine1": "Baenschstraße 5",
+  "addressLine2": "06712 Zeitz",
+  "phone": "0175 8961228",
+  "phoneHref": "tel:+491758961228",
+  "email": "zeitloszeitz@gmail.com",
+  "emailHref": "mailto:zeitloszeitz@gmail.com",
+  "hours": [
+    {
+      "dayIndex": 1,
+      "dayLabel": "Mo",
+      "time": "07:00 – 19:00"
+    },
+    {
+      "dayIndex": 2,
+      "dayLabel": "Di",
+      "time": "07:00 – 19:00"
+    },
+    {
+      "dayIndex": 3,
+      "dayLabel": "Mi",
+      "time": "07:00 – 19:00"
+    },
+    {
+      "dayIndex": 4,
+      "dayLabel": "Do",
+      "time": "07:00 – 19:00"
+    },
+    {
+      "dayIndex": 5,
+      "dayLabel": "Fr",
+      "time": "07:00 – 19:00"
+    },
+    {
+      "dayIndex": 6,
+      "dayLabel": "Sa",
+      "time": "10:00 – 17:00"
+    },
+    {
+      "dayIndex": 0,
+      "dayLabel": "So",
+      "time": "10:00 – 17:00"
+    }
+  ]
+}

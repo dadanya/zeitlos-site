@@ -1,0 +1,64 @@
+:root {
+  --espresso: #1a1714;
+  --milk: #f7f3ee;
+  --gold: #c9a87c;
+  --wood: #d9c9ad;
+  --linen: #eae3d6;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(201, 168, 124, 0.18), transparent 34rem),
+    linear-gradient(135deg, var(--milk), var(--linen));
+}
+
+.admin-welcome {
+  position: fixed;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 1;
+  max-width: 320px;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(201, 168, 124, 0.38);
+  border-radius: 12px;
+  background: rgba(247, 243, 238, 0.88);
+  box-shadow: 0 18px 50px rgba(26, 23, 20, 0.12);
+  backdrop-filter: blur(12px);
+  color: var(--espresso);
+  pointer-events: none;
+}
+
+.admin-welcome img {
+  width: 112px;
+  height: auto;
+  display: block;
+  margin-bottom: 0.65rem;
+}
+
+.admin-welcome p {
+  margin: 0 0 0.3rem;
+  font: 600 0.78rem/1.2 system-ui, sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.admin-welcome span {
+  display: block;
+  font: 400 0.9rem/1.5 system-ui, sans-serif;
+  color: rgba(26, 23, 20, 0.72);
+}
+
+.cms-loaded .admin-welcome {
+  opacity: 0;
+  transform: translateY(-0.5rem);
+  transition: opacity 240ms ease, transform 240ms ease;
+}
+
+@media (max-width: 900px) {
+  .admin-welcome {
+    position: static;
+    margin: 1rem;
+    max-width: none;
+  }
+}

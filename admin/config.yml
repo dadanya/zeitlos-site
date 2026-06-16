@@ -2,53 +2,69 @@ backend:
   name: git-gateway
   branch: main
 
-# Sprache der Oberfläche
 locale: de
+logo_url: /images/logo-dark.png
+show_preview_links: true
 
-# Hochgeladene Bilder landen im Ordner images/
 media_folder: "images"
 public_folder: "/images"
 
+editor:
+  preview: true
+
 collections:
-  # ── Speisekarte (data/menu.json) ───────────────────────────
   - name: "menu"
-    label: "Speisekarte"
+    label: "Zeitlos Menü & Preise"
+    description: "Gerichte, Getränke, Preise, Zutaten, Allergene und kleine Hinweise auf den Karten."
     files:
       - name: "menu"
         label: "Menü bearbeiten"
         file: "data/menu.json"
         fields:
           - name: categories
-            label: "Kategorien"
+            label: "Kategorien im Menü"
             label_singular: "Kategorie"
             widget: list
             summary: "{{fields.title}}"
+            collapsed: true
+            minimize_collapsed: true
+            hint: "Hier sind die Tabs im Menü. Die Reihenfolge hier ist auch die Reihenfolge auf der Website."
             fields:
-              - { name: id, label: "ID (technisch — bitte nicht ändern)", widget: string, hint: "Wird intern verwendet, z. B. 'kombo'." }
-              - { name: title, label: "Titel der Kategorie", widget: string }
+              - name: id
+                label: "Technische ID"
+                widget: string
+                hint: "Nur ändern, wenn du weißt, was du tust. Diese ID verbindet den Tab mit den Karten."
+              - name: title
+                label: "Name der Kategorie"
+                widget: string
+                hint: "So steht die Kategorie später auf der Website."
               - name: type
-                label: "Anzeige-Typ"
+                label: "Kartentyp"
                 widget: select
                 default: "flip"
+                hint: "Speisen haben Zutaten & Allergene auf der Rückseite. Getränke haben eine einfache Beschreibung."
                 options:
-                  - { label: "Speise (mit Zutaten & Allergenen, umdrehbar)", value: "flip" }
-                  - { label: "Getränk (mit Beschreibung)", value: "simple" }
+                  - { label: "Speise: Karte dreht sich mit Zutaten & Allergenen", value: "flip" }
+                  - { label: "Getränk: einfache Karte mit Beschreibung", value: "simple" }
               - name: items
-                label: "Gerichte"
-                label_singular: "Gericht"
+                label: "Gerichte & Getränke"
+                label_singular: "Eintrag"
                 widget: list
-                summary: "{{fields.name}} — {{fields.price}}"
+                summary: "{{fields.name}} · {{fields.price}}"
+                collapsed: true
+                minimize_collapsed: true
                 fields:
-                  - { name: name, label: "Name", widget: string }
-                  - { name: price, label: "Preis", widget: string, hint: "z. B. 3,50 €" }
-                  - { name: desc, label: "Beschreibung (nur Getränke)", widget: text, required: false }
-                  - { name: zutaten, label: "Zutaten (nur Speisen)", widget: text, required: false }
-                  - { name: allergene, label: "Allergene (nur Speisen)", widget: string, required: false, hint: "z. B. A, C, G, J" }
+                  - { name: name, label: "Name", widget: string, hint: "Name so schreiben, wie er auf der Website erscheinen soll." }
+                  - { name: price, label: "Preis", widget: string, hint: "Zum Beispiel: 3,50 €" }
+                  - { name: desc, label: "Kurze Beschreibung (nur Getränke)", widget: text, required: false, hint: "Für Kaffee, Tee und Limonaden. Bei Speisen meistens leer lassen." }
+                  - { name: zutaten, label: "Zutaten (nur Speisen)", widget: text, required: false, hint: "Kurz und verständlich. Beispiel: Hähnchen, Käse, Salat, Tomate." }
+                  - { name: allergene, label: "Allergene", widget: string, required: false, hint: "Beispiel: A, C, G, J. Bitte sorgfältig prüfen." }
                   - name: tags
                     label: "Markierungen"
                     widget: select
                     multiple: true
                     required: false
+                    hint: "Mehrere Markierungen sind möglich. Nur auswählen, was wirklich passt."
                     options:
                       - { label: "Beliebt", value: "popular" }
                       - { label: "Ab 11 Uhr", value: "ab11" }
@@ -56,47 +72,91 @@ collections:
                       - { label: "Vegetarisch", value: "veggie" }
                       - { label: "Vegan möglich", value: "vegan-mgl" }
                       - { label: "Saisonal", value: "seasonal" }
-          - { name: legend, label: "Allergene — Legende", widget: string }
-          - { name: legendNote, label: "Allergene — Hinweis", widget: text }
+          - { name: legend, label: "Allergene: Legende", widget: string, hint: "Diese Zeile erklärt die Buchstaben A, C, G usw." }
+          - { name: legendNote, label: "Allergene: Hinweis", widget: text, hint: "Kurzer Hinweis unter der Allergene-Legende." }
 
-  # ── Texte, Kontakt & Galerie (data/content.json) ────────────
-  - name: "inhalt"
-    label: "Texte, Kontakt & Galerie"
+  - name: "gallery"
+    label: "Galerie & Fotos"
+    description: "Fotos in der Atmosphäre-Sektion. Du kannst Bilder austauschen, Alt-Texte ändern und den Bildausschnitt steuern."
     files:
-      - name: "content"
-        label: "Inhalte bearbeiten"
-        file: "data/content.json"
+      - name: "gallery"
+        label: "Fotos bearbeiten"
+        file: "data/gallery.json"
         fields:
-          - name: hero
-            label: "Startbereich (Hero)"
-            widget: object
-            fields:
-              - { name: eyebrow, label: "Kleiner Text oben", widget: string }
-              - { name: tagline, label: "Slogan", widget: string }
-          - name: about
-            label: "Über uns"
-            widget: object
-            fields:
-              - { name: text, label: "Text", widget: text }
-          - name: delivery
-            label: "Bestellen & Lieferung"
-            widget: object
-            fields:
-              - { name: text, label: "Text", widget: text }
-          - name: contact
-            label: "Kontakt"
-            widget: object
-            fields:
-              - { name: addressLine1, label: "Adresse — Zeile 1", widget: string }
-              - { name: addressLine2, label: "Adresse — Zeile 2", widget: string }
-              - { name: phone, label: "Telefon (Anzeige)", widget: string }
-              - { name: phoneHref, label: "Telefon-Link", widget: string, hint: "Format: tel:+49..." }
-              - { name: email, label: "E-Mail (Anzeige)", widget: string }
-              - { name: emailHref, label: "E-Mail-Link", widget: string, hint: "Format: mailto:..." }
-          - name: gallery
-            label: "Galerie (Fotos)"
+          - name: items
+            label: "Galerie-Fotos"
             label_singular: "Foto"
             widget: list
+            summary: "{{fields.title}}"
+            collapsed: true
+            minimize_collapsed: true
             fields:
+              - { name: title, label: "Interner Name", widget: string, hint: "Nur für dich in der Admin-Ansicht." }
               - { name: image, label: "Bild", widget: image, required: false }
-              - { name: alt, label: "Bildbeschreibung (Alt-Text)", widget: string, required: false }
+              - { name: alt, label: "Bildbeschreibung", widget: string, required: false, hint: "Kurz beschreiben, was auf dem Foto zu sehen ist." }
+              - name: fit
+                label: "Bilddarstellung"
+                widget: select
+                default: "cover"
+                hint: "Cover füllt den Block und kann etwas schneiden. Contain zeigt das ganze Foto mit ruhigen Rändern."
+                options:
+                  - { label: "Block füllen (cover)", value: "cover" }
+                  - { label: "Ganzes Foto zeigen (contain)", value: "contain" }
+              - { name: minHeight, label: "Mindesthöhe in Pixel", widget: number, value_type: int, min: 120, max: 700, default: 200, hint: "Nur ändern, wenn ein Foto zu klein oder zu groß wirkt." }
+
+  - name: "hero"
+    label: "Startbereich"
+    description: "Der erste Eindruck: kleiner Text über dem Logo und Slogan unter ZEITLOS."
+    files:
+      - name: "hero"
+        label: "Hero bearbeiten"
+        file: "data/hero.json"
+        fields:
+          - { name: eyebrow, label: "Kleiner Text oben", widget: string, hint: "Zum Beispiel: Café & Bistro · Zeitz · seit 2026" }
+          - { name: tagline, label: "Slogan unter ZEITLOS", widget: string }
+
+  - name: "about"
+    label: "Über uns"
+    description: "Der persönliche Text über das Café."
+    files:
+      - name: "about"
+        label: "Über-uns-Text bearbeiten"
+        file: "data/about.json"
+        fields:
+          - { name: text, label: "Text", widget: text, hint: "Warm, persönlich und nicht zu lang. Dieser Text steht in der Über-uns-Sektion." }
+
+  - name: "delivery"
+    label: "Bestellen & Lieferung"
+    description: "Text für Lieferung, Abholung und Business Lunch."
+    files:
+      - name: "delivery"
+        label: "Bestellen-Text bearbeiten"
+        file: "data/delivery.json"
+        fields:
+          - { name: text, label: "Text", widget: text, hint: "Hier erklärst du Lieferung, Abholung und Business Lunch für Firmen." }
+
+  - name: "contact"
+    label: "Kontakt & Öffnungszeiten"
+    description: "Telefon, E-Mail, Adresse und Öffnungszeiten."
+    files:
+      - name: "contact"
+        label: "Kontakt bearbeiten"
+        file: "data/contact.json"
+        fields:
+          - { name: addressLine1, label: "Adresse: Straße", widget: string }
+          - { name: addressLine2, label: "Adresse: PLZ und Ort", widget: string }
+          - { name: phone, label: "Telefon (Anzeige)", widget: string, hint: "So steht die Nummer auf der Website." }
+          - { name: phoneHref, label: "Telefon-Link", widget: string, hint: "Format: tel:+491758961228" }
+          - { name: email, label: "E-Mail (Anzeige)", widget: string }
+          - { name: emailHref, label: "E-Mail-Link", widget: string, hint: "Format: mailto:zeitloszeitz@gmail.com" }
+          - name: hours
+            label: "Öffnungszeiten"
+            label_singular: "Tag"
+            widget: list
+            allow_add: false
+            summary: "{{fields.dayLabel}} · {{fields.time}}"
+            hint: "Die Tage sind fest. Ändere nur die Uhrzeiten."
+            fields:
+              - { name: dayIndex, label: "Tagesnummer", widget: hidden }
+              - { name: dayLabel, label: "Tag", widget: string }
+              - { name: time, label: "Öffnungszeit", widget: string, hint: "Zum Beispiel: 07:00 – 19:00 oder Geschlossen" }

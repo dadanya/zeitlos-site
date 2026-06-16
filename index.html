@@ -1485,7 +1485,7 @@
           <div class="contact-block fade-up">
             <p class="contact-block__label">Adresse</p>
             <address class="contact-block__value" style="font-style:normal; font-family:var(--font-body); font-size:1rem; font-weight:500;">
-              Baenschstraße 5<br>06712 Zeitz<br>
+              <span data-bind="contact.addressLine1">Baenschstraße 5</span><br><span data-bind="contact.addressLine2">06712 Zeitz</span><br>
               <small style="color:var(--warm-gray);font-family:var(--font-body);font-size:0.82rem;">am Bahnhof Zeitz</small>
             </address>
           </div>
@@ -1549,7 +1549,7 @@
             <div class="map-placeholder__pin" aria-hidden="true">
               <svg width="40" height="40" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
             </div>
-            <p class="map-placeholder__text">Baenschstraße 5<br>06712 Zeitz</p>
+            <p class="map-placeholder__text"><span data-bind="contact.addressLine1">Baenschstraße 5</span><br><span data-bind="contact.addressLine2">06712 Zeitz</span></p>
           </div>
 
           <a
@@ -1744,37 +1744,68 @@
         if (app) app.innerHTML = '<p style="color:var(--warm-gray)">Menü wird in Kürze geladen …</p>';
       });
 
-    // ── Тексты, контакты и галерея из data/content.json (управляется через /admin) ──
-    fetch('data/content.json')
-      .then(r => r.json())
-      .then(c => {
-        const get = p => p.split('.').reduce((o, k) => (o == null ? undefined : o[k]), c);
-        document.querySelectorAll('[data-bind]').forEach(el => {
-          const v = get(el.dataset.bind); if (v != null) el.textContent = v;
-        });
-        document.querySelectorAll('[data-bind-href]').forEach(el => {
-          const v = get(el.dataset.bindHref); if (v != null) el.setAttribute('href', v);
-        });
-        if (Array.isArray(c.gallery)) {
-          document.querySelectorAll('[data-gallery]').forEach(slot => {
-            const g = c.gallery[+slot.dataset.gallery];
-            if (g && g.image) {
-              const alt = (g.alt || '').replace(/"/g, '&quot;');
-              const fit = slot.dataset.fit || 'cover';
-              const minh = slot.dataset.minh || '200';
-              const bg = fit === 'contain' ? 'background:var(--linen);' : '';
-              slot.innerHTML = `<img src="${g.image}" alt="${alt}" style="width:100%;height:100%;object-fit:${fit};${bg}min-height:${minh}px;" />`;
-            }
-          });
-        }
-      })
-      .catch(e => console.error('Inhalt konnte nicht geladen werden:', e));
+    function highlightToday() {
+      const todayNum = new Date().getDay(); // 0=So, 1=Mo, ..., 6=Sa
+      document.querySelectorAll(`[data-day="${todayNum}"]`).forEach(el => {
+        el.classList.add('today');
+      });
+    }
 
-    // ── Подсветка текущего дня в расписании ────────────────
-    const todayNum = new Date().getDay(); // 0=Вс, 1=Пн, ..., 6=Сб
-    document.querySelectorAll(`[data-day="${todayNum}"]`).forEach(el => {
-      el.classList.add('today');
+    function bindContent(c) {
+      const get = p => p.split('.').reduce((o, k) => (o == null ? undefined : o[k]), c);
+      document.querySelectorAll('[data-bind]').forEach(el => {
+        const v = get(el.dataset.bind);
+        if (v != null) el.textContent = v;
+      });
+      document.querySelectorAll('[data-bind-href]').forEach(el => {
+        const v = get(el.dataset.bindHref);
+        if (v != null) el.setAttribute('href', v);
+      });
+    }
+
+    function renderHours(hours) {
+      const grid = document.getElementById('hours-grid');
+      if (!grid || !Array.isArray(hours)) return;
+      grid.innerHTML = hours.map(h =>
+        `<span class="day" data-day="${esc(h.dayIndex)}">${esc(h.dayLabel)}</span><span class="time" data-day="${esc(h.dayIndex)}">${esc(h.time)}</span>`
+      ).join('');
+      highlightToday();
+    }
+
+    function renderGallery(items) {
+      if (!Array.isArray(items)) return;
+      document.querySelectorAll('[data-gallery]').forEach(slot => {
+        const g = items[+slot.dataset.gallery];
+        if (g && g.image) {
+          const alt = (g.alt || '').replace(/"/g, '&quot;');
+          const fit = g.fit || slot.dataset.fit || 'cover';
+          const minh = g.minHeight || slot.dataset.minh || '200';
+          const bg = fit === 'contain' ? 'background:var(--linen);' : '';
+          slot.innerHTML = `<img src="${g.image}" alt="${alt}" style="width:100%;height:100%;object-fit:${fit};${bg}min-height:${minh}px;" />`;
+        }
+      });
+    }
+
+    // ── Inhalte aus data/*.json (verwaltet über /admin) ──
+    const loadJson = file => fetch(file).then(r => {
+      if (!r.ok) throw new Error(`${file} konnte nicht geladen werden`);
+      return r.json();
     });
+
+    Promise.all([
+      loadJson('data/hero.json'),
+      loadJson('data/about.json'),
+      loadJson('data/delivery.json'),
+      loadJson('data/contact.json'),
+      loadJson('data/gallery.json'),
+    ]).then(([hero, about, delivery, contact, gallery]) => {
+      const content = { hero, about, delivery, contact };
+      bindContent(content);
+      renderHours(contact.hours);
+      renderGallery(gallery.items);
+    }).catch(e => console.error('Inhalte konnten nicht geladen werden:', e));
+
+    highlightToday();
   </script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
