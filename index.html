@@ -1,0 +1,2532 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Zeitlos – Café & Bistro in Zeitz | Kaffee, Frühstück & mehr</title>
+  <meta name="description" content="Zeitlos – Ihr gemütliches Café und Bistro am Bahnhof Zeitz. Frische Backwaren, Frühstück, hausgemachte Kuchen und ukrainisch-deutsche Küche. Seit 2026 für Sie da!" />
+  <meta name="keywords" content="Café Zeitz, Bistro Zeitz, Kaffee Zeitz, Frühstück Zeitz, Zeitlos" />
+  <link rel="canonical" href="https://zeitlos-zeitz.de/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Zeitlos – Café & Bistro in Zeitz" />
+  <meta property="og:description" content="Gemütliches Café am Bahnhof Zeitz. Frische Backwaren, Frühstück, hausgemachte Kuchen und ukrainisch-deutsche Küche. Seit 2026." />
+  <meta property="og:url" content="https://zeitlos-zeitz.de/" />
+  <meta property="og:image" content="https://zeitlos-zeitz.de/og-image.jpg" />
+  <meta property="og:locale" content="de_DE" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Zeitlos – Café & Bistro in Zeitz" />
+  <meta name="twitter:description" content="Gemütliches Café am Bahnhof Zeitz." />
+
+  <!-- Favicon placeholder (замените на реальный файл favicon.ico) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='78' font-size='90' text-anchor='middle' font-family='Georgia,serif'>Z</text></svg>" />
+
+  <!-- Шрифты Google Fonts (бесплатные) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Marcellus&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Bodoni+Moda:ital,opsz,wght@0,6..96,300;0,6..96,400;1,6..96,300&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'Universal Antiqua';
+      src: url('fonts/UniversalAntiqua.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Universal Antiqua';
+      src: url('fonts/UniversalAntiqua-Bold.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+    }
+  </style>
+
+  <!-- JSON-LD LocalBusiness разметка -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Zeitlos",
+    "description": "Gemütliches Café und Bistro am Bahnhof Zeitz mit frischen Backwaren, Frühstück, hausgemachten Kuchen und ukrainisch-deutscher Küche. Seit 2026.",
+    "url": "https://zeitlos-zeitz.de",
+    "telephone": "+491758961228",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Baenschstraße 5",
+      "addressLocality": "Zeitz",
+      "postalCode": "06712",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 51.0483,
+      "longitude": 12.1386
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday","Sunday"], "opens": "10:00", "closes": "17:00" }
+    ],
+    "sameAs": ["https://www.instagram.com/zeitlos.zeitz", "https://www.facebook.com/zeitloszeitz"]
+  }
+  </script>
+
+  <style>
+    /* ============================================================
+       ДИЗАЙН-ТОКЕНЫ — здесь меняйте цвета сайта
+    ============================================================ */
+    :root {
+      --espresso:   #1A1714;   /* чёрные вывески, стулья */
+      --milk:       #F4EEE3;   /* тёплый бежевый — стены кафе */
+      --gold:       #C9A87C;   /* золото часов и акцентов */
+      --wood:       #D9C9AD;   /* светлое дерево реек */
+      --linen:      #EAE3D6;   /* чуть темнее бежевый */
+      --warm-gray:  #8A8070;   /* вторичный текст */
+      --card-bg:    #F7F3EC;   /* фон карточек */
+
+      --font-display: 'Marcellus', 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'Manrope', system-ui, sans-serif;
+      --font-serif:   'Cormorant Garamond', 'Bodoni Moda', Georgia, serif;
+
+      --radius-sm:  8px;
+      --radius-md:  16px;
+      --radius-lg:  24px;
+
+      --shadow-soft: 0 4px 24px rgba(26,23,20,0.08);
+      --shadow-card: 0 2px 16px rgba(26,23,20,0.10);
+      --shadow-hover: 0 8px 40px rgba(26,23,20,0.16);
+
+      --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--milk);
+      color: var(--espresso);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ============================================================
+       НАВИГАЦИЯ
+    ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background var(--transition), backdrop-filter var(--transition), box-shadow var(--transition);
+    }
+
+    /* Прокрутка над ТЁМНОЙ секцией — тёмная шапка */
+    .nav.scrolled {
+      background: rgba(26, 23, 20, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(26,23,20,0.3);
+    }
+
+    /* Прокрутка над СВЕТЛОЙ секцией — светлая шапка */
+    .nav.scrolled.nav--light {
+      background: rgba(247, 243, 238, 0.92);
+      box-shadow: 0 1px 0 rgba(26,23,20,0.08);
+    }
+
+    .nav__logo {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      transition: opacity var(--transition);
+    }
+
+.nav__logo img {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+    /* Переключение логотипов: светлый над тёмным фоном, тёмный над светлым.
+       Селекторы с img.<class> перебивают правило .nav__logo img по специфичности */
+    .nav__logo img.nav__logo-dark { display: none; }
+    .nav--light .nav__logo img.nav__logo-light { display: none; }
+    .nav--light .nav__logo img.nav__logo-dark { display: block; }
+
+
+    .nav__logo svg {
+      height: 38px;
+      width: auto;
+    }
+
+    .nav.scrolled .nav__logo svg .logo-text { fill: var(--espresso); }
+    .nav.scrolled .nav__logo svg .logo-clock { stroke: var(--espresso); fill: none; }
+    .nav.scrolled .nav__logo svg .logo-subtext { fill: var(--espresso); }
+
+    .nav__links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav__links a {
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(247,243,238,0.85);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .nav__links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width var(--transition);
+    }
+
+    .nav__links a:hover::after { width: 100%; }
+    .nav__links a:hover { color: var(--gold); }
+
+    .nav.scrolled .nav__links a { color: rgba(247,243,238,0.85); }
+    .nav.scrolled .nav__links a:hover { color: var(--gold); }
+
+    /* Светлая шапка — тёмные ссылки.
+       Компаунд .nav.scrolled.nav--light перебивает .nav.scrolled (специфичность) */
+    .nav--light .nav__links a,
+    .nav.scrolled.nav--light .nav__links a { color: var(--wood); }
+    .nav--light .nav__links a:hover,
+    .nav.scrolled.nav--light .nav__links a:hover { color: var(--gold); }
+
+    /* Бургер-кнопка для мобильных */
+    .nav__burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .nav__burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--milk);
+      transition: var(--transition);
+      transform-origin: center;
+    }
+
+    .nav.scrolled .nav__burger span { background: var(--milk); }
+    .nav--light .nav__burger span,
+    .nav.scrolled.nav--light .nav__burger span { background: var(--espresso); }
+
+    .nav__burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav__burger.open span:nth-child(2) { opacity: 0; }
+    .nav__burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Мобильное меню */
+    .nav__mobile {
+      display: none;
+      position: fixed;
+      top: 90px; left: 0; right: 0;
+      background: rgba(26, 23, 20, 0.97);
+      backdrop-filter: blur(16px);
+      padding: 1.5rem 2rem 2rem;
+      list-style: none;
+      flex-direction: column;
+      gap: 1.2rem;
+      z-index: 99;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .nav__mobile.open { display: flex; }
+    .nav__mobile a {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--milk);
+      transition: color var(--transition);
+    }
+    .nav__mobile a:hover { color: var(--gold); }
+
+    /* Светлая тема мобильного меню — синхронно с шапкой */
+    .nav__mobile--light {
+      background: rgba(247, 243, 238, 0.97);
+      box-shadow: 0 8px 32px rgba(26,23,20,0.12);
+    }
+    .nav__mobile--light a { color: var(--wood); }
+    .nav__mobile--light a:hover { color: var(--gold); }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: var(--espresso);
+    }
+
+    /* Фоновый паттерн — гравюрный шум */
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,124,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 80% at 80% 20%, rgba(201,168,124,0.06) 0%, transparent 60%);
+    }
+
+    /* Монограмма Z — фирменный элемент */
+    .hero__monogram {
+      position: absolute;
+      right: -5%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-display);
+      font-size: clamp(20rem, 40vw, 40rem);
+      font-weight: 300;
+      color: rgba(201,168,124,0.06);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -0.05em;
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      padding: 2rem;
+    }
+
+    .hero__eyebrow {
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+
+    .hero__title {
+      font-family: 'GFS Didot', 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(4rem, 12vw, 9rem);
+      font-weight: 400;
+      color: var(--milk);
+      line-height: 0.9;
+      letter-spacing: 0.09em;
+      margin-bottom: 0.3em;
+      text-transform: uppercase;
+      font-style: normal;
+    }
+
+    .hero__title em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .hero__tagline {
+      font-family: 'Cormorant Garamond', 'Bodoni Moda', Georgia, serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-style: italic;
+      font-weight: 300;
+      color: rgba(247,243,238,0.65);
+      margin-bottom: 3rem;
+      letter-spacing: 0.06em;
+    }
+
+    .hero__actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ============================================================
+       КНОПКИ
+    ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 2rem;
+      border-radius: 50px;
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+    }
+
+    .btn--primary {
+      background: var(--gold);
+      color: var(--espresso);
+    }
+    .btn--primary:hover {
+      background: #D9BB93;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(201,168,124,0.4);
+    }
+
+    .btn--outline {
+      background: transparent;
+      color: var(--milk);
+      border: 1.5px solid rgba(247,243,238,0.35);
+    }
+    .btn--outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .btn--dark {
+      background: var(--espresso);
+      color: var(--milk);
+    }
+    .btn--dark:hover {
+      background: var(--wood);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(26,23,20,0.3);
+    }
+
+    /* Прокрутка вниз */
+    .hero__scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(247,243,238,0.4);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      animation: scrollBounce 2s ease-in-out infinite;
+    }
+
+    .hero__scroll svg { width: 20px; height: 20px; }
+
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ============================================================
+       ОБЩИЕ СЕКЦИИ
+    ============================================================ */
+    section { padding: 6rem 2rem; }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+
+    .section-title {
+      font-family: 'Marcellus', 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--espresso);
+      margin-bottom: 1rem;
+      letter-spacing: 0.08em;
+    }
+
+    .section-title em { font-style: italic; color: var(--gold); }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--warm-gray);
+      max-width: 520px;
+      line-height: 1.7;
+    }
+
+    /* Разделитель */
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: 1.5rem 0;
+    }
+
+    /* ============================================================
+       О НАС
+    ============================================================ */
+    .about { background: var(--linen); }
+
+    .about__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about__image-area {
+      position: relative;
+    }
+
+    .about__img-placeholder {
+      /* Замените background на: background: url('ваше-фото.jpg') center/cover */
+      background: linear-gradient(135deg, var(--wood) 0%, var(--gold) 100%);
+      aspect-ratio: 4/5;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .about__img-label {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      background: rgba(26,23,20,0.75);
+      backdrop-filter: blur(8px);
+      color: var(--milk);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+    }
+
+    .about__float-badge {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: var(--espresso);
+      color: var(--milk);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .about__float-badge .badge-num {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .about__float-badge .badge-text {
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+      margin-top: 0.2rem;
+    }
+
+    .about__perks {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .perk {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: 1.2rem 1.4rem;
+      background: var(--card-bg);
+      border-radius: var(--radius-md);
+      transition: var(--transition);
+      border: 1px solid var(--wood);
+    }
+
+    .perk:hover {
+      background: #fff;
+      border-color: var(--gold);
+      box-shadow: var(--shadow-card);
+      transform: translateX(4px);
+    }
+
+    .perk__icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .perk__title {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--espresso);
+      margin-bottom: 0.2rem;
+    }
+
+    .perk__desc {
+      font-size: 0.85rem;
+      color: var(--warm-gray);
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       МЕНЮ
+       Чтобы добавить/изменить позиции: найдите нужную категорию
+       в секции <section id="menu"> и редактируйте data-атрибуты
+       карточек или текст напрямую.
+    ============================================================ */
+    .menu { background: var(--espresso); padding: 6rem 2rem; }
+
+    .menu .section-title { color: var(--milk); }
+    .menu .section-subtitle { color: rgba(247,243,238,0.55); }
+    .menu .divider { background: var(--gold); }
+
+    .menu__tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin: 2.5rem 0;
+    }
+
+    .menu__tab {
+      padding: 0.55rem 1.3rem;
+      border-radius: 50px;
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1.5px solid rgba(247,243,238,0.2);
+      background: transparent;
+      color: rgba(247,243,238,0.55);
+      transition: var(--transition);
+    }
+
+    .menu__tab:hover,
+    .menu__tab.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: var(--espresso);
+    }
+
+    .menu__panel { display: none; }
+    .menu__panel.active { display: grid; }
+
+    .menu__grid {
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.2rem;
+    }
+
+    /* Карточка меню */
+    .menu-card {
+      background: rgba(247,243,238,0.05);
+      border: 1px solid rgba(247,243,238,0.1);
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1.5rem;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 0;
+      background: var(--gold);
+      transition: height var(--transition);
+    }
+
+    .menu-card:hover {
+      background: rgba(247,243,238,0.09);
+      border-color: rgba(201,168,124,0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    .menu-card:hover::before { height: 100%; }
+
+    .menu-card__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .menu-card__name {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--milk);
+      line-height: 1.2;
+    }
+
+    .menu-card__price {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--gold);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .menu-card__desc {
+      font-size: 0.82rem;
+      color: rgba(247,243,238,0.5);
+      line-height: 1.5;
+      margin-bottom: 0.8rem;
+    }
+
+    .menu-card__tags {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.6rem;
+      border-radius: 50px;
+    }
+
+    .tag--popular { background: rgba(201,168,124,0.2); color: var(--gold); }
+    .tag--vegan   { background: rgba(100,180,100,0.2); color: #8DC87A; }
+    .tag--veggie  { background: rgba(150,180,90,0.18); color: #C2D88A; }
+    .tag--spicy   { background: rgba(220,80,60,0.2);  color: #E8937A; }
+    .tag--new     { background: rgba(100,140,220,0.2); color: #90B4F0; }
+
+    /* ── Flip-карточки меню (клик → состав и аллергены) ──── */
+    .flip-card {
+      perspective: 1200px;
+      cursor: pointer;
+      min-height: 150px;
+    }
+
+    .flip-card__inner {
+      display: grid;
+      min-height: 150px;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card__inner { transform: rotateY(180deg); }
+
+    .flip-card__front,
+    .flip-card__back {
+      grid-area: 1 / 1;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      background: rgba(247,243,238,0.05);
+      border: 1px solid rgba(247,243,238,0.1);
+      transition: border-color var(--transition), background var(--transition);
+    }
+
+    .flip-card:hover .flip-card__front {
+      background: rgba(247,243,238,0.09);
+      border-color: rgba(201,168,124,0.3);
+    }
+
+    .flip-card__back {
+      transform: rotateY(180deg);
+      background: rgba(201,168,124,0.12);
+      border-color: rgba(201,168,124,0.3);
+    }
+
+    .flip-card__hint {
+      margin-top: auto;
+      padding-top: 0.9rem;
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.65;
+    }
+
+    .flip-card__label {
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.25rem;
+    }
+
+    .flip-card__text {
+      font-size: 0.85rem;
+      color: rgba(247,243,238,0.78);
+      line-height: 1.45;
+      margin-bottom: 0.8rem;
+    }
+    .flip-card__text:last-child { margin-bottom: 0; }
+
+    .flip-card__front .menu-card__tags { margin-top: 0.6rem; }
+
+    /* Легенда аллергенов */
+    .menu__legend {
+      margin-top: 2.5rem;
+      padding: 1.4rem 1.6rem;
+      background: rgba(247,243,238,0.05);
+      border: 1px solid rgba(247,243,238,0.1);
+      border-radius: var(--radius-md);
+    }
+
+    .menu__legend-title {
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+
+    .menu__legend-text {
+      font-size: 0.82rem;
+      color: rgba(247,243,238,0.6);
+      line-height: 1.7;
+    }
+
+    .menu__legend-note {
+      font-size: 0.78rem;
+      color: rgba(247,243,238,0.45);
+      margin-top: 0.7rem;
+      font-style: italic;
+    }
+
+    /* ============================================================
+       ГАЛЕРЕЯ
+       Чтобы заменить placeholder на реальные фото:
+       найдите div.gallery-item и замените на:
+       <img src="путь/к/фото.jpg" alt="описание" />
+    ============================================================ */
+    .gallery { background: var(--linen); padding: 6rem 2rem; }
+
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover { transform: scale(1.02); box-shadow: var(--shadow-hover); }
+
+    .gallery-item .placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(26,23,20,0.35);
+    }
+
+    /* Сетка Bento */
+    .gallery-item:nth-child(1) { grid-column: span 5; grid-row: span 2; }
+    .gallery-item:nth-child(2) { grid-column: span 4; }
+    .gallery-item:nth-child(3) { grid-column: span 3; }
+    .gallery-item:nth-child(4) { grid-column: span 4; }
+    .gallery-item:nth-child(5) { grid-column: span 3; }
+    .gallery-item:nth-child(6) { grid-column: span 5; }
+    .gallery-item:nth-child(7) { grid-column: span 7; }
+
+    .gallery-item:nth-child(1) .placeholder { min-height: 420px; }
+    .gallery-item:nth-child(6) .placeholder,
+    .gallery-item:nth-child(7) .placeholder { min-height: 220px; }
+
+    /* Цвета-заглушки для фото */
+    .gallery-item:nth-child(1) .placeholder { background: linear-gradient(145deg, #C9A87C 0%, #8B6F4E 100%); }
+    .gallery-item:nth-child(2) .placeholder { background: linear-gradient(145deg, #E8DDD0 0%, #C9A87C 100%); }
+    .gallery-item:nth-child(3) .placeholder { background: linear-gradient(145deg, #6B5C47 0%, #3D322B 100%); color: rgba(247,243,238,0.4); }
+    .gallery-item:nth-child(4) .placeholder { background: linear-gradient(145deg, #1A1714 0%, #6B5C47 100%); color: rgba(247,243,238,0.3); }
+    .gallery-item:nth-child(5) .placeholder { background: linear-gradient(145deg, #C9A87C 0%, #E8DDD0 100%); }
+    .gallery-item:nth-child(6) .placeholder { background: linear-gradient(145deg, #F7F3EE 0%, #C9A87C 100%); }
+    .gallery-item:nth-child(7) .placeholder { background: linear-gradient(145deg, #E8DDD0 0%, #9C9189 100%); }
+
+    /* ============================================================
+       КОНТАКТЫ
+    ============================================================ */
+    .contacts { background: var(--milk); }
+
+    .contacts__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contacts__info { display: flex; flex-direction: column; gap: 2rem; }
+
+    .contact-block {}
+
+    .contact-block__label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-block__value {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: var(--espresso);
+      line-height: 1.5;
+    }
+
+    .contact-block__value a {
+      transition: color var(--transition);
+    }
+    .contact-block__value a:hover { color: var(--gold); }
+
+    .hours-grid {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.3rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .hours-grid .day { color: var(--warm-gray); }
+    .hours-grid .time { color: var(--espresso); font-weight: 500; }
+    .hours-grid .today { color: var(--gold); font-weight: 500; }
+
+    /* Карта-заглушка */
+    .contacts__map-area {}
+
+    .map-placeholder {
+      width: 100%;
+      height: 340px;
+      background: linear-gradient(135deg, var(--linen) 0%, var(--espresso) 100%);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .map-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a87c' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .map-placeholder__pin { font-size: 2.5rem; }
+
+    .map-placeholder__text {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--milk);
+      text-align: center;
+      opacity: 0.85;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--espresso);
+      border: 1.5px solid var(--wood);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================
+       BESTELLEN & LIEFERUNG
+    ============================================================ */
+    .delivery { background: var(--milk); }
+
+    .delivery__intro {
+      max-width: 640px;
+      margin-bottom: 1rem;
+    }
+
+    .delivery__text {
+      font-size: 1.02rem;
+      color: var(--warm-gray);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .delivery__actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .delivery__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      margin-top: 3rem;
+    }
+
+    .delivery-card {
+      background: var(--card-bg);
+      border: 1px solid var(--linen);
+      border-radius: var(--radius-md);
+      padding: 1.6rem 1.5rem;
+      transition: var(--transition);
+    }
+
+    .delivery-card:hover {
+      border-color: var(--gold);
+      box-shadow: var(--shadow-card);
+      transform: translateY(-4px);
+    }
+
+    .delivery-card__icon {
+      font-size: 1.8rem;
+      display: block;
+      margin-bottom: 0.8rem;
+      line-height: 1;
+    }
+
+    .delivery-card__title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--espresso);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.02em;
+    }
+
+    .delivery-card__desc {
+      font-size: 0.86rem;
+      color: var(--warm-gray);
+      line-height: 1.55;
+    }
+
+    /* WhatsApp-Button */
+    .btn--whatsapp {
+      background: #25D366;
+      color: #fff;
+    }
+    .btn--whatsapp:hover {
+      background: #1FB457;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(37,211,102,0.35);
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: var(--espresso);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer__logo-img {
+      height: 80px;
+      width: auto;
+      margin: 0 auto 0.8rem;
+      display: block;
+      opacity: 0.9;
+    }
+
+    .footer__tagline {
+      font-family: 'Manrope', system-ui, sans-serif;
+      letter-spacing: 0.22em;
+    }
+
+    .footer__links a {
+      font-family: 'Manrope', system-ui, sans-serif;
+      letter-spacing: 0.18em;
+    }
+
+    .footer__tagline {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--warm-gray);
+      margin-bottom: 2rem;
+    }
+
+    .footer__links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .footer__links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(247,243,238,0.4);
+      transition: color var(--transition);
+    }
+
+    .footer__links a:hover { color: var(--gold); }
+
+    .footer__copy {
+      font-size: 0.75rem;
+      color: rgba(247,243,238,0.25);
+    }
+
+    /* ============================================================
+       АНИМАЦИИ при скролле
+    ============================================================ */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-up:nth-child(2) { transition-delay: 0.1s; }
+    .fade-up:nth-child(3) { transition-delay: 0.2s; }
+    .fade-up:nth-child(4) { transition-delay: 0.3s; }
+
+    /* ============================================================
+       АДАПТИВНОСТЬ
+    ============================================================ */
+    @media (max-width: 900px) {
+      .nav__links { display: none; }
+      .nav__burger { display: flex; align-items: center; }
+
+      /* Компактная шапка на мобильных */
+      .nav { height: 64px; padding: 0 1.2rem; }
+      .nav__logo img { height: 44px; }
+      .nav__mobile { top: 64px; }
+
+      .about__grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about__img-placeholder { aspect-ratio: 3/2; }
+      .about__float-badge { right: 1rem; bottom: -1rem; width: 100px; height: 100px; }
+
+      .contacts__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+      .gallery__grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .gallery-item:nth-child(1) { grid-column: span 6; }
+      .gallery-item:nth-child(2) { grid-column: span 3; }
+      .gallery-item:nth-child(3) { grid-column: span 3; }
+      .gallery-item:nth-child(4) { grid-column: span 3; }
+      .gallery-item:nth-child(5) { grid-column: span 3; }
+      .gallery-item:nth-child(6) { grid-column: span 6; }
+      .gallery-item:nth-child(7) { grid-column: span 6; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 4rem 1.2rem; }
+
+      .hero__title { letter-spacing: 0.04em; }
+      .hero__monogram { font-size: 60vw; right: -10%; }
+
+      .menu__grid { grid-template-columns: 1fr; }
+
+      .gallery__grid { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+      .gallery-item:nth-child(n) { grid-column: span 1; grid-row: span 1; }
+      .gallery-item:nth-child(1) .placeholder { min-height: 180px; }
+      .gallery-item .placeholder { min-height: 140px; }
+
+      .footer__links { flex-wrap: wrap; gap: 1rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      .fade-up { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       НАВИГАЦИЯ
+  ============================================================ -->
+  <nav class="nav" id="navbar" role="navigation" aria-label="Hauptnavigation">
+    <a href="#" class="nav__logo" aria-label="Zeitlos — Startseite">
+    <img src="images/logo.png" alt="Zeitlos Logo" class="nav__logo-light">
+    <img src="images/logo-dark.png" alt="Zeitlos Logo" class="nav__logo-dark">
+</a>
+
+    <ul class="nav__links">
+      <li><a href="#about">Über uns</a></li>
+      <li><a href="#menu">Menü</a></li>
+      <li><a href="#delivery">Bestellen</a></li>
+      <li><a href="#gallery">Galerie</a></li>
+      <li><a href="#contacts">Kontakt</a></li>
+    </ul>
+
+    <button class="nav__burger" id="burger" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Мобильное меню -->
+  <ul class="nav__mobile" id="mobileMenu" role="menu">
+    <li><a href="#about" role="menuitem">Über uns</a></li>
+    <li><a href="#menu" role="menuitem">Menü</a></li>
+    <li><a href="#delivery" role="menuitem">Bestellen</a></li>
+    <li><a href="#gallery" role="menuitem">Galerie</a></li>
+    <li><a href="#contacts" role="menuitem">Kontakt</a></li>
+  </ul>
+
+  <!-- ============================================================
+       HERO — ГЛАВНЫЙ ЭКРАН
+  ============================================================ -->
+  <section class="hero" id="home" aria-label="Willkommen bei Zeitlos">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__monogram" aria-hidden="true">Z</div>
+
+    <div class="hero__content">
+      <span class="hero__eyebrow">Café & Bistro · Zeitz · seit 2026</span>
+      <h1 class="hero__title">ZEIT<em>LOS</em></h1>
+      <p class="hero__tagline">Wo jeder Moment zählt — Kaffee, Küche & Herzlichkeit</p>
+
+      <div class="hero__actions">
+        <!-- Кнопка "Меню" -->
+        <a href="#menu" class="btn btn--primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          Menü ansehen
+        </a>
+        <!-- Кнопка "Как найти" -->
+        <a href="#contacts" class="btn btn--outline">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          So finden Sie uns
+        </a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ============================================================
+       О НАС
+  ============================================================ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+
+        <!-- Фото-блок -->
+        <div class="about__image-area fade-up">
+          <!--
+            КАК ЗАМЕНИТЬ НА РЕАЛЬНОЕ ФОТО:
+            Удалите div.about__img-placeholder ниже
+            и вставьте: <img src="фото-кафе.jpg" alt="Zeitlos Interieur" style="border-radius:24px;width:100%;object-fit:cover;aspect-ratio:4/5" />
+          -->
+          <img src="images/interior.jpg" alt="Zeitlos Café Interieur" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-lg);" />
+        </div>
+
+        <!-- Текст -->
+        <div class="about__text">
+          <span class="section-label fade-up">Über uns</span>
+          <h2 class="section-title fade-up">Ein Ort zum<br><em>Verweilen</em></h2>
+          <div class="divider fade-up"></div>
+          <p class="section-subtitle fade-up">
+            Mitten in Zeitz, direkt am Bahnhof, haben wir 2026 einen Ort eröffnet, an dem Zeit keine Rolle spielt. 
+            Im Zeitlos treffen ukrainische Gastfreundschaft und deutsche Herzlichkeit aufeinander — 
+            bei einer Tasse Kaffee, einem herzhaften Frühstück oder einem Stück unserer hausgemachten Backwaren.
+          </p>
+
+          <!-- 3 преимущества -->
+          <div class="about__perks">
+            <article class="perk fade-up">
+              <div>
+                <p class="perk__title">Guter Kaffee, ehrlich gemacht</p>
+                <p class="perk__desc">Von Espresso bis Latte — wir brühen mit Sorgfalt und servieren mit Herzlichkeit.</p>
+              </div>
+            </article>
+            <article class="perk fade-up">
+              <div>
+                <p class="perk__title">Hausgemachte Backwaren täglich</p>
+                <p class="perk__desc">Kuchen, Croissants und süße Stücke — jeden Tag frisch gebacken nach eigenen Rezepten.</p>
+              </div>
+            </article>
+            <article class="perk fade-up">
+              <div>
+                <p class="perk__title">Gemütliche Atmosphäre</p>
+                <p class="perk__desc">Warmes Holz, weiches Licht und ein Team, das sich wirklich freut, Sie zu sehen.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       МЕНЮ
+       СТРУКТУРА КАРТОЧКИ:
+       <article class="menu-card">
+         <div class="menu-card__header">
+           <h3 class="menu-card__name">Название</h3>
+           <span class="menu-card__price">3,50 €</span>
+         </div>
+         <p class="menu-card__desc">Описание</p>
+         <div class="menu-card__tags">
+           <span class="tag tag--popular">Popular</span>
+         </div>
+       </article>
+  ============================================================ -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <span class="section-label">Speisekarte</span>
+      <h2 class="section-title">Unser <em>Menü</em></h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Frisch zubereitet, mit Liebe gemacht — Kombo-Menüs ab 11:00 Uhr und hausgemachter Kaffee.</p>
+
+      <!-- Вкладки категорий -->
+      <div class="menu__tabs" role="tablist" aria-label="Menükategorien">
+        <button class="menu__tab active" role="tab" aria-selected="true" data-target="kombo">Kombo Menü</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-target="herzhaft">Herzhafte Snacks</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-target="suesses">Süßes & Gebäck</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-target="sandwiches">Sandwiches & Brötchen</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-target="salate">Salate & Bowls</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-target="kaffee">Kaffee</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-target="kalter-kaffee">Kalter Kaffee</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-target="tee">Tee</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-target="limonaden">Limonaden</button>
+      </div>
+
+      <!-- ── KOMBO MENÜ ────────────────────────────────────── -->
+      <div class="menu__panel active menu__grid" id="kombo" role="tabpanel">
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Kombo Hähnchen Burger, 10 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Kombo Hähnchen Burger</h3><span class="menu-card__price">10,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--popular">Popular</span><span class="tag tag--new">Ab 11 Uhr</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Hähnchen, Käse, Salat, Tomate, Gurken, Sauce, Burger-Brötchen, Pommes Frites, Getränk 0,33 l</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G, J</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Kombo Rindfleisch Burger, 11 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Kombo Rindfleisch Burger</h3><span class="menu-card__price">11,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--popular">Popular</span><span class="tag tag--new">Ab 11 Uhr</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Rindfleisch, Käse, Salat, Tomate, Gurken, Sauce, Burger-Brötchen, Pommes Frites, Getränk 0,33 l</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G, J</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Kombo Hähnchen Wrap, 10 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Kombo Hähnchen Wrap</h3><span class="menu-card__price">10,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--new">Ab 11 Uhr</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Hähnchenbrust, Tomate, Eisbergsalat, Sauce, Weizen-Tortilla, Pommes Frites, Getränk 0,33 l</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G, J</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hähnchen Nuggets 9 Stück, 5 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Hähnchen Nuggets (9 Stk.)</h3><span class="menu-card__price">5,00 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Knusprige Hähnchen-Nuggets mit Sauce</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, J</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hot Dog, 3,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Hot Dog</h3><span class="menu-card__price">3,50 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Würstchen im Brötchen mit Ketchup, Mayonnaise und Senf</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, I, J</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Kartoffel-Kroketten mit Sauce 7 Stück, 3,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Kartoffel-Kroketten mit Sauce (7 Stk.)</h3><span class="menu-card__price">3,50 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Knusprige Kartoffel-Kroketten mit Sauce</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G, J</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Bratwurst mit Brötchen, 4 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Bratwurst mit Brötchen</h3><span class="menu-card__price">4,00 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Gegrillte Bratwurst im Brötchen mit Senf</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, I, J</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Bockwurst im Brötchen, 4,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Bockwurst im Brötchen</h3><span class="menu-card__price">4,50 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Bockwurst im Brötchen, auf Wunsch mit Senf oder Sauce</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, I, J</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ── HERZHAFTE SNACKS (Flip-Karten: Tippen für Zutaten & Allergene) ── -->
+      <div class="menu__panel menu__grid" id="herzhaft" role="tabpanel">
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Mini-Pizza, 3,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Mini-Pizza</h3><span class="menu-card__price">3,50 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Weizenteig, Tomatensauce, Schinken, Käse, Zwiebeln und Gewürze</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Würstchen im Teig, 2,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Würstchen im Teig</h3><span class="menu-card__price">2,00 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Würstchen im gebackenen Teig</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G, I, J</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hausgemachte Pirogge mit Fleischfüllung, 3,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Hausgemachte Pirogge mit Fleischfüllung</h3><span class="menu-card__price">3,00 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Hausgemachter Teig mit Fleischfüllung und Gewürzen</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hausgemachte Pirogge mit Weißkohl, 2,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Hausgemachte Pirogge mit Weißkohl</h3><span class="menu-card__price">2,50 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Hausgemachter Teig mit Weißkohlfüllung und Gewürzen</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hausgemachte Pirogge mit Kartoffeln und Pilzen, 2,80 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Hausgemachte Pirogge mit Kartoffeln und Pilzen</h3><span class="menu-card__price">2,80 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Hausgemachter Teig mit Kartoffeln, Pilzen und Gewürzen</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hausgemachtes Blätterteiggebäck mit Fleischfüllung, 3,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Hausgemachtes Blätterteiggebäck mit Fleischfüllung</h3><span class="menu-card__price">3,00 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Blätterteig mit Fleischfüllung und Gewürzen</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Brezel, 2,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Brezel</h3><span class="menu-card__price">2,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--vegan">Vegan</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Brezel aus Weizenmehl</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Börek mit Spinat, 2,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Börek mit Spinat</h3><span class="menu-card__price">2,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--vegan">Vegan</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Dünner Teig mit Spinatfüllung und Gewürzen</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Börek mit Käse, 2,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Börek mit Käse</h3><span class="menu-card__price">2,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Dünner Teig mit Käsefüllung</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Börek mit Hackfleisch, 2,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Börek mit Hackfleisch</h3><span class="menu-card__price">2,50 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Dünner Teig mit Hackfleischfüllung und Gewürzen</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ── SÜSSES & GEBÄCK (Flip-Karten: Tippen für Zutaten & Allergene) ── -->
+      <div class="menu__panel menu__grid" id="suesses" role="tabpanel">
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Croissant, 1,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Croissant</h3><span class="menu-card__price">1,50 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Butter-Blätterteig</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Hausgemachte Blätterteigtasche mit Kirschen, 3,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Hausgemachte Blätterteigtasche mit Kirschen</h3><span class="menu-card__price">3,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Blätterteig mit Kirschfüllung</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Himbeer-Pudding-Tasche, 2,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Himbeer-Pudding-Tasche</h3><span class="menu-card__price">2,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Gebäck mit Himbeer- und Puddingfüllung</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Kirsch-Blätterteig, 2,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Kirsch-Blätterteig</h3><span class="menu-card__price">2,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Blätterteig mit Kirschfüllung</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Apfeltasche, 2,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Apfeltasche</h3><span class="menu-card__price">2,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Gebäck mit Apfelfüllung und Zimt</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Teilchen mit Kirschen, 3,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Teilchen mit Kirschen</h3><span class="menu-card__price">3,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Süßes Gebäck mit Kirschfüllung</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Teilchen mit Quark, 3,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Teilchen mit Quark</h3><span class="menu-card__price">3,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Süßes Gebäck mit Quarkfüllung</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Syrnyky (Quarkküchlein), 2,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Syrnyky (Quarkküchlein)</h3><span class="menu-card__price">2,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Quark, Eier, Weizenmehl, Zucker und Vanille</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Pfannkuchen, 3,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Pfannkuchen</h3><span class="menu-card__price">3,50 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Weizenmehl, Milch, Eier, Zucker, Salz und Öl</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Schokokuchen, 3,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Schokokuchen</h3><span class="menu-card__price">3,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Weizenmehl, Zucker, Eier, Butter oder Öl, Kakao bzw. Schokolade, Backpulver</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, F, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Apfelkuchen, 3,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Apfelkuchen</h3><span class="menu-card__price">3,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Weizenmehl, Äpfel, Zucker, Eier, Butter, Zimt und Backpulver</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Kirschkuchen, 3,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Kirschkuchen</h3><span class="menu-card__price">3,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Weizenmehl, Kirschen, Zucker, Eier, Butter und Backpulver</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Rhabarberkuchen, 3,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Rhabarberkuchen</h3><span class="menu-card__price">3,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Weizenmehl, Rhabarber, Zucker, Eier, Butter und Backpulver</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Pfannkuchen mit Kirschen, 2,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Pfannkuchen mit Kirschen</h3><span class="menu-card__price">2,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Pfannkuchen mit Kirschfüllung</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ── SANDWICHES & BRÖTCHEN (Flip-Karten: Tippen für Zutaten & Allergene) ── -->
+      <div class="menu__panel menu__grid" id="sandwiches" role="tabpanel">
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Sandwich mit Schinken und Käse, 4,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Sandwich mit Schinken und Käse</h3><span class="menu-card__price">4,50 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Brot, Schinken, Käse, Gurke und Frischkäse</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Sandwich mit Salami und Käse, 4,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Sandwich mit Salami und Käse</h3><span class="menu-card__price">4,50 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Brot, Salami, Käse, Gurke und Frischkäse</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Brötchen mit Lachs und Käse, 4,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Brötchen mit Lachs und Käse</h3><span class="menu-card__price">4,50 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Brötchen, Lachs, Käse, Gurke und Frischkäse</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, D, G</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Brötchen mit Ei und Käse, 3,00 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Brötchen mit Ei und Käse</h3><span class="menu-card__price">3,00 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Brötchen, Ei, Käse und Frischkäse</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, G</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ── SALATE & BOWLS (Flip-Karten: Tippen für Zutaten & Allergene) ── -->
+      <div class="menu__panel menu__grid" id="salate" role="tabpanel">
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Frischer Weißkohlsalat, 2,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Frischer Weißkohlsalat</h3><span class="menu-card__price">2,50 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--vegan">Vegan</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Weißkohl, Gurke, Rettich, Essig-Öl-Dressing, Salz und Pfeffer</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">Keine kennzeichnungspflichtigen Allergene (mit Senf im Dressing: J)</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Rotkohlsalat / Coleslaw, 2,50 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Rotkohlsalat / Coleslaw</h3><span class="menu-card__price">2,50 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Rotkohl, Karotten, Mayonnaise, Essig, Zucker, Salz und Pfeffer</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">C, J (mit Milch in der Mayonnaise: G)</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Caesar Salat mit Hähnchen, 6,90 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Caesar Salat mit Hähnchen</h3><span class="menu-card__price">6,90 €</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Hähnchenbrust, Salat, Caesar-Dressing, Croutons, Parmesan und Tomaten</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">A, C, D, G, J</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="flip-card fade-up" tabindex="0" role="button" aria-label="Vegetarische Bowl, 6,90 Euro. Tippen für Zutaten und Allergene">
+          <div class="flip-card__inner">
+            <div class="flip-card__front">
+              <div class="menu-card__header"><h3 class="menu-card__name">Vegetarische Bowl</h3><span class="menu-card__price">6,90 €</span></div>
+              <div class="menu-card__tags"><span class="tag tag--veggie">Vegetarisch</span></div>
+              <p class="flip-card__hint">Tippen für Zutaten &amp; Allergene</p>
+            </div>
+            <div class="flip-card__back">
+              <p class="flip-card__label">Zutaten</p>
+              <p class="flip-card__text">Buchweizen, Pilze, Paprika, Radieschen, Salat, Kirschtomaten, Rote Bete, Feta und Kräuter</p>
+              <p class="flip-card__label">Allergene</p>
+              <p class="flip-card__text">G</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ── KAFFEE ────────────────────────────────────────── -->
+      <div class="menu__panel menu__grid" id="kaffee" role="tabpanel">
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Espresso</h3>
+            <span class="menu-card__price">2,00 €</span>
+          </div>
+          <p class="menu-card__desc">Kräftig, konzentriert, aromatisch — der klassische Einstieg in den Tag.</p>
+          <div class="menu-card__tags"><span class="tag tag--popular">Popular</span></div>
+        </article>
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Doppio</h3>
+            <span class="menu-card__price">2,80 €</span>
+          </div>
+          <p class="menu-card__desc">Doppelter Espresso — intensiv und vollmundig.</p>
+          <div class="menu-card__tags"></div>
+        </article>
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Schwarz Kaffee</h3>
+            <span class="menu-card__price">2,50 €</span>
+          </div>
+          <p class="menu-card__desc">Klassischer schwarzer Kaffee — pur und aromatisch.</p>
+          <div class="menu-card__tags"></div>
+        </article>
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Milch Kaffee</h3>
+            <span class="menu-card__price">3,00 €</span>
+          </div>
+          <p class="menu-card__desc">Milder Kaffee mit viel warmer Milch.</p>
+          <div class="menu-card__tags"></div>
+        </article>
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Cappuccino</h3>
+            <span class="menu-card__price">3,20 / 3,80 €</span>
+          </div>
+          <p class="menu-card__desc">Espresso mit samtig aufgeschäumter Milch. Klein 0,2 l · Groß 0,4 l.</p>
+          <div class="menu-card__tags"><span class="tag tag--popular">Popular</span></div>
+        </article>
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Latte Macchiato</h3>
+            <span class="menu-card__price">3,20 / 3,80 €</span>
+          </div>
+          <p class="menu-card__desc">Großer Milchkaffee in verführerischen Schichten. Klein 0,2 l · Groß 0,4 l.</p>
+          <div class="menu-card__tags"><span class="tag tag--vegan">Vegan mögl.</span></div>
+        </article>
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Flat White</h3>
+            <span class="menu-card__price">3,40 €</span>
+          </div>
+          <p class="menu-card__desc">Doppelter Espresso, wenig Milch — intensiv und seidig.</p>
+          <div class="menu-card__tags"></div>
+        </article>
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Heiße Schokolade</h3>
+            <span class="menu-card__price">3,20 / 3,80 €</span>
+          </div>
+          <p class="menu-card__desc">Cremige heiße Schokolade. Klein 0,2 l · Groß 0,4 l.</p>
+          <div class="menu-card__tags"></div>
+        </article>
+
+      </div>
+
+      <!-- ── KALTER KAFFEE ─────────────────────────────────── -->
+      <div class="menu__panel menu__grid" id="kalter-kaffee" role="tabpanel">
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Hummel mit Orangensaft</h3>
+            <span class="menu-card__price">4,20 €</span>
+          </div>
+          <p class="menu-card__desc">Espresso mit frischem Orangensaft — erfrischend und fruchtig.</p>
+          <div class="menu-card__tags"><span class="tag tag--new">Seasonal</span></div>
+        </article>
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Iced Latte</h3>
+            <span class="menu-card__price">3,80 €</span>
+          </div>
+          <p class="menu-card__desc">Espresso mit kalter Milch und Eis — perfekt für warme Tage.</p>
+          <div class="menu-card__tags"><span class="tag tag--vegan">Vegan mögl.</span></div>
+        </article>
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Coffee Tonic</h3>
+            <span class="menu-card__price">4,20 €</span>
+          </div>
+          <p class="menu-card__desc">Espresso auf Tonic Water mit Eis — spritzig und überraschend.</p>
+          <div class="menu-card__tags"><span class="tag tag--new">Seasonal</span></div>
+        </article>
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Kalte Schokolade</h3>
+            <span class="menu-card__price">3,80 €</span>
+          </div>
+          <p class="menu-card__desc">Eisgekühlte Schokolade mit Milch — süß und cremig.</p>
+          <div class="menu-card__tags"></div>
+        </article>
+
+      </div>
+
+      <!-- ── TEE ───────────────────────────────────────────── -->
+      <div class="menu__panel menu__grid" id="tee" role="tabpanel">
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Tee</h3>
+            <span class="menu-card__price">2,00 €</span>
+          </div>
+          <p class="menu-card__desc">Heißer Tee nach Auswahl — wohltuend und aromatisch.</p>
+          <div class="menu-card__tags"><span class="tag tag--vegan">Vegan</span></div>
+        </article>
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Zitrone</h3>
+            <span class="menu-card__price">0,30 €</span>
+          </div>
+          <p class="menu-card__desc">Frische Zitronenscheibe als Beilage zum Tee.</p>
+          <div class="menu-card__tags"></div>
+        </article>
+
+      </div>
+
+      <!-- ── LIMONADEN ─────────────────────────────────────── -->
+      <div class="menu__panel menu__grid" id="limonaden" role="tabpanel">
+
+        <article class="menu-card fade-up">
+          <div class="menu-card__header">
+            <h3 class="menu-card__name">Hausgemachte Limonade</h3>
+            <span class="menu-card__price">2,00 €</span>
+          </div>
+          <p class="menu-card__desc">Erfrischende Limonade nach eigenem Rezept — frisch zubereitet.</p>
+          <div class="menu-card__tags"><span class="tag tag--vegan">Vegan</span><span class="tag tag--popular">Popular</span></div>
+        </article>
+
+      </div>
+
+      <!-- Легенда аллергенов -->
+      <div class="menu__legend fade-up">
+        <p class="menu__legend-title">Allergene-Kennzeichnung</p>
+        <p class="menu__legend-text">
+          A – Glutenhaltiges Getreide · C – Eier · D – Fisch · F – Sojabohnen ·
+          G – Milch / Laktose · I – Sellerie · J – Senf
+        </p>
+        <p class="menu__legend-note">Angaben zu Zutaten und Allergenen ohne Gewähr. Bei Fragen oder Unverträglichkeiten sprechen Sie bitte unser Team an.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BESTELLEN & LIEFERUNG
+  ============================================================ -->
+  <section class="delivery" id="delivery">
+    <div class="container">
+      <span class="section-label fade-up">Bestellen & Lieferung</span>
+      <h2 class="section-title fade-up">Essen <em>bestellen</em></h2>
+      <div class="divider fade-up"></div>
+
+      <div class="delivery__intro">
+        <p class="delivery__text fade-up">
+          Ob Mittagspause im Büro, ein gemütliches Essen zu Hause oder ein Business Lunch für Ihr Team —
+          bei Zeitlos bereiten wir alles frisch und mit Liebe zu. Bestellen Sie ganz bequem telefonisch
+          oder per WhatsApp. Wir liefern nach Absprache oder halten Ihre Bestellung zur Abholung direkt
+          bei uns am Bahnhof Zeitz bereit. Für Firmen, Büros und kleine Veranstaltungen stellen wir gern
+          individuelle Business-Lunch-Angebote zusammen.
+        </p>
+
+        <div class="delivery__actions fade-up">
+          <a href="tel:+491758961228" class="btn btn--primary">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            Jetzt telefonisch bestellen
+          </a>
+          <a href="https://wa.me/491758961228" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+            Per WhatsApp bestellen
+          </a>
+        </div>
+      </div>
+
+      <div class="delivery__grid">
+        <article class="delivery-card fade-up">
+          <h3 class="delivery-card__title">Frisch zubereitet</h3>
+          <p class="delivery-card__desc">Jede Bestellung wird frisch und mit Sorgfalt für Sie zubereitet.</p>
+        </article>
+
+        <article class="delivery-card fade-up">
+          <h3 class="delivery-card__title">Lieferung oder Abholung</h3>
+          <p class="delivery-card__desc">Lieferung nach Absprache oder bequeme Abholung am Bahnhof Zeitz.</p>
+        </article>
+
+        <article class="delivery-card fade-up">
+          <h3 class="delivery-card__title">Business Lunch für Teams</h3>
+          <p class="delivery-card__desc">Warme Mahlzeiten für Büros, Firmen und kleine Veranstaltungen.</p>
+        </article>
+
+        <article class="delivery-card fade-up">
+          <h3 class="delivery-card__title">Individuelle Angebote</h3>
+          <p class="delivery-card__desc">Auf Anfrage stellen wir ein passendes Angebot für Sie zusammen.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ГАЛЕРЕЯ
+       Как заменить placeholder на реальные фото:
+       В каждом .gallery-item удалите div.placeholder
+       и вставьте: <img src="фото.jpg" alt="описание" style="width:100%;height:100%;object-fit:cover" />
+  ============================================================ -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <span class="section-label fade-up">Atmosphäre</span>
+      <h2 class="section-title fade-up">Ein Blick in's <em>Zeitlos</em></h2>
+      <div class="divider fade-up"></div>
+
+      <div class="gallery__grid" role="list" aria-label="Fotogalerie">
+
+        <div class="gallery-item fade-up" role="listitem">
+          <img src="images/interior2.jpg" alt="Zeitlos Café Innenbereich mit ZEITLOS-Schriftzug und Theke" style="width:100%;height:100%;object-fit:contain;background:var(--linen);min-height:420px;" />
+        </div>
+
+        <div class="gallery-item fade-up" role="listitem">
+          <div class="placeholder" role="img" aria-label="Foto: Kaffee">Specialty Coffee</div>
+        </div>
+
+        <div class="gallery-item fade-up" role="listitem">
+          <div class="placeholder" role="img" aria-label="Foto: Theke">Unsere Theke</div>
+        </div>
+
+        <div class="gallery-item fade-up" role="listitem">
+          <img src="images/interior3_crop.jpg" alt="Wandkunst im Zeitlos — Zug-Gemälde mit Zeitz-Motiv" style="width:100%;height:100%;object-fit:cover;min-height:200px;" />
+        </div>
+
+        <div class="gallery-item fade-up" role="listitem">
+          <img src="images/food1_crop.jpg" alt="Frühstück im Zeitlos" style="width:100%;height:100%;object-fit:cover;min-height:200px;" />
+        </div>
+
+        <div class="gallery-item fade-up" role="listitem">
+          <img src="images/interior4.jpg" alt="Zeitlos Café — Wand mit ZEITLOS-Schriftzug, Uhr und gerahmten Zeitz-Motiven" style="width:100%;height:100%;object-fit:contain;background:var(--linen);min-height:220px;" />
+        </div>
+
+        <div class="gallery-item fade-up" role="listitem">
+          <img src="images/team.jpg" alt="Das Team von Zeitlos vor dem Café" style="width:100%;height:100%;object-fit:contain;background:var(--linen);min-height:220px;" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       КОНТАКТЫ
+  ============================================================ -->
+  <section class="contacts" id="contacts">
+    <div class="container">
+      <span class="section-label fade-up">Kontakt & Anfahrt</span>
+      <h2 class="section-title fade-up">Besuchen Sie <em>uns</em></h2>
+      <div class="divider fade-up"></div>
+
+      <div class="contacts__grid">
+
+        <!-- Контактная информация -->
+        <div class="contacts__info">
+
+          <div class="contact-block fade-up">
+            <p class="contact-block__label">Adresse</p>
+            <address class="contact-block__value" style="font-style:normal; font-family:var(--font-body); font-size:1rem; font-weight:500;">
+              Baenschstraße 5<br>06712 Zeitz<br>
+              <small style="color:var(--warm-gray);font-family:var(--font-body);font-size:0.82rem;">am Bahnhof Zeitz</small>
+            </address>
+          </div>
+
+          <div class="contact-block fade-up">
+            <p class="contact-block__label">Telefon</p>
+            <p class="contact-block__value" style="font-family:var(--font-body); font-size:1rem; font-weight:500;">
+              <a href="tel:+491758961228">0175 8961228</a>
+            </p>
+          </div>
+
+          <div class="contact-block fade-up">
+            <p class="contact-block__label">E-Mail</p>
+            <p class="contact-block__value" style="font-family:var(--font-body); font-size:1rem; font-weight:500;">
+              <a href="mailto:zeitloszeitz@gmail.com">zeitloszeitz@gmail.com</a>
+            </p>
+          </div>
+
+          <!-- Часы работы — id="today-hours" используется JS для подсветки текущего дня -->
+          <div class="contact-block fade-up">
+            <p class="contact-block__label">Öffnungszeiten</p>
+            <div class="hours-grid" id="hours-grid">
+              <span class="day" data-day="1">Mo</span><span class="time" data-day="1">07:00 – 19:00</span>
+              <span class="day" data-day="2">Di</span><span class="time" data-day="2">07:00 – 19:00</span>
+              <span class="day" data-day="3">Mi</span><span class="time" data-day="3">07:00 – 19:00</span>
+              <span class="day" data-day="4">Do</span><span class="time" data-day="4">07:00 – 19:00</span>
+              <span class="day" data-day="5">Fr</span><span class="time" data-day="5">07:00 – 19:00</span>
+              <span class="day" data-day="6">Sa</span><span class="time" data-day="6">10:00 – 17:00</span>
+              <span class="day" data-day="0">So</span><span class="time" data-day="0">10:00 – 17:00</span>
+            </div>
+          </div>
+
+          <div class="contact-block fade-up">
+            <p class="contact-block__label">Social Media</p>
+            <div class="social-links">
+              <a href="https://www.instagram.com/zeitlos.zeitz" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Zeitlos auf Instagram">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                @zeitlos.zeitz
+              </a>
+              <a href="https://www.facebook.com/zeitloszeitz" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Zeitlos auf Facebook">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                zeitloszeitz
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Карта -->
+        <div class="contacts__map-area fade-up">
+          <!--
+            Чтобы добавить настоящую Google Maps карту,
+            замените этот блок на iframe:
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!..."
+              width="100%" height="340" style="border:0;border-radius:24px"
+              allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          -->
+          <div class="map-placeholder" role="img" aria-label="Kartenansicht – Baenschstraße 5, 06712 Zeitz">
+            <div class="map-placeholder__pin" aria-hidden="true">
+              <svg width="40" height="40" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <p class="map-placeholder__text">Baenschstraße 5<br>06712 Zeitz</p>
+          </div>
+
+          <a
+            href="https://maps.google.com/maps?vet=10CAAQoqAOahcKEwiIpc2GxoKVAxUAAAAAHQAAAAAQDA..i&pvq=Cg0vZy8xMXpiZGxzcDFxIg0KB3plaXRsb3MQAhgD&lqi=Cgd6ZWl0bG9zSLaoscmpvoCACFoREAAYACIHemVpdGxvczICZGWSAQZiaXN0cm8&fvr=1&cs=0&um=1&ie=UTF-8&fb=1&gl=de&sa=X&ftid=0x47a6e94bd3710039:0x44bab30f15c19149"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--dark"
+            style="width:100%;justify-content:center;margin-top:0.2rem;"
+          >
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            In Google Maps öffnen
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer role="contentinfo">
+    <img src="images/logo.png" alt="Zeitlos" class="footer__logo-img" />
+    <p class="footer__tagline">Café & Bistro · Zeitz · am Bahnhof</p>
+
+    <ul class="footer__links">
+      <li><a href="#about">Über uns</a></li>
+      <li><a href="#menu">Menü</a></li>
+      <li><a href="#delivery">Bestellen</a></li>
+      <li><a href="#gallery">Galerie</a></li>
+      <li><a href="#contacts">Kontakt</a></li>
+      <li><a href="https://www.instagram.com/zeitlos.zeitz" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.facebook.com/zeitloszeitz" target="_blank" rel="noopener">Facebook</a></li>
+    </ul>
+
+    <p class="footer__copy">© <span id="year"></span> Zeitlos Café & Bistro · Zeitz · Alle Rechte vorbehalten</p>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+    // ── Год в футере ────────────────────────────────────────
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── Навигация: адаптивный цвет при скролле ─────────────
+    const navbar = document.getElementById('navbar');
+    // Секции со СВЕТЛЫМ фоном — над ними шапка становится светлой
+    const lightSections = ['about', 'delivery', 'gallery', 'contacts'];
+
+    function updateNav() {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+
+      // Определяем секцию прямо под шапкой
+      const probeY = navbar.offsetHeight / 2;
+      let overLight = false;
+      for (const id of lightSections) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        const r = el.getBoundingClientRect();
+        if (r.top <= probeY && r.bottom >= probeY) { overLight = true; break; }
+      }
+      navbar.classList.toggle('nav--light', overLight);
+      const mob = document.getElementById('mobileMenu');
+      if (mob) mob.classList.toggle('nav__mobile--light', overLight);
+    }
+
+    window.addEventListener('scroll', updateNav, { passive: true });
+    window.addEventListener('resize', updateNav, { passive: true });
+    updateNav();
+
+    // ── Бургер-меню ─────────────────────────────────────────
+    const burger     = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    burger.addEventListener('click', () => {
+      const open = burger.classList.toggle('open');
+      mobileMenu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    // Закрыть мобильное меню при клике на ссылку
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ── Вкладки меню ────────────────────────────────────────
+    const tabs   = document.querySelectorAll('.menu__tab');
+    const panels = document.querySelectorAll('.menu__panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        panels.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+
+        const target = document.getElementById(tab.dataset.target);
+        if (target) {
+          target.classList.add('active');
+          // Сброс перевёрнутых карточек при переключении вкладки
+          target.querySelectorAll('.flip-card.flipped').forEach(c => c.classList.remove('flipped'));
+          // Повторный запуск анимаций fade-up при переключении вкладки
+          target.querySelectorAll('.fade-up').forEach(el => {
+            el.classList.remove('visible');
+            requestAnimationFrame(() => el.classList.add('visible'));
+          });
+        }
+      });
+    });
+
+    // ── Flip-карточки: клик / Enter / Space переворачивает ──
+    document.querySelectorAll('.flip-card').forEach(card => {
+      const toggle = () => card.classList.toggle('flipped');
+      card.addEventListener('click', toggle);
+      card.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+      });
+    });
+
+    // ── Анимация появления при скролле ─────────────────────
+    const fadeEls = document.querySelectorAll('.fade-up');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    // Запускаем сразу для карточек активной вкладки меню
+    document.querySelectorAll('.menu__panel.active .fade-up').forEach(el => {
+      el.classList.add('visible');
+    });
+
+    // ── Подсветка текущего дня в расписании ────────────────
+    const todayNum = new Date().getDay(); // 0=Вс, 1=Пн, ..., 6=Сб
+    document.querySelectorAll(`[data-day="${todayNum}"]`).forEach(el => {
+      el.classList.add('today');
+    });
+  </script>
+
+</body>
+</html>
