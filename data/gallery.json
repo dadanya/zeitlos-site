@@ -8,16 +8,16 @@
       "minHeight": 420
     },
     {
-      "title": "Specialty Coffee",
-      "image": "",
-      "alt": "Specialty Coffee",
+      "title": "Hausgemachte Kuchen",
+      "image": "images/kuchen.jpg",
+      "alt": "Hausgemachte Kuchen und Backwaren in der Vitrine im Zeitlos",
       "fit": "cover",
       "minHeight": 200
     },
     {
       "title": "Unsere Theke",
-      "image": "",
-      "alt": "Unsere Theke",
+      "image": "images/team2.jpg",
+      "alt": "Das Team von Zeitlos an der Theke mit frischen Speisen",
       "fit": "cover",
       "minHeight": 200
     },
@@ -29,7 +29,7 @@
       "minHeight": 200
     },
     {
-      "title": "Fr?hst?ck",
+      "title": "Frühstück",
       "image": "images/food1_crop.jpg",
       "alt": "Frühstück im Zeitlos",
       "fit": "cover",
